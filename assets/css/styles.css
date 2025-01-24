@@ -1,0 +1,456 @@
+@font-face {
+    font-family: 'pixel';
+    src: url('../fonts/pokemon-emerald.ttf');
+}
+
+:root {
+    --sky-pixels-per-unit: 32px;
+    --sky-color-1: #D9EDF7;
+    --sky-color-2: #BDE4F9;
+    --sky-color-3: #B0DEF9;
+    --sky-color-4: #9CD7F9;
+    --sky-color-5: #88D0F9;
+    --sky-color-6: #79C9F9;
+    --grass-color: #7FAD71;
+}
+
+body {
+    font-family: 'pixel';
+    background-color: var(--sky-color-6);
+}
+
+.sprite-icon {
+    --size: 24px;
+    /* Default size of one sprite */
+    --scale: 2;
+    --image-width: 480px;
+    --image-height: 384px;
+    --x: 0;
+    --y: 0;
+    height: calc(var(--size) * var(--scale));
+    width: calc(var(--size) * var(--scale));
+    background-image: url('../img/pkm-icons.png');
+    background-size: calc(var(--image-width) * var(--scale)) calc(var(--image-height) * var(--scale));
+    background-position: calc(var(--x) * var(--scale) * var(--size) * -1) calc(var(--y) * var(--scale) * var(--size) * -1);
+    background-repeat: no-repeat;
+    display: inline-block;
+    /* Allow for inline display */
+    image-rendering: pixelated;
+}
+
+.content-section {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+}
+
+.content-section-heading h2 {
+    font-size: 3rem;
+}
+
+.content-section-heading h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {}
+
+.masthead {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes masthead-scroll {
+    from {
+        background-position-x: 0px;
+    }
+    to {
+        background-position-x: 2000px;
+    }
+}
+
+.masthead-background {
+    background-color: #79C9F9;
+}
+
+/* Background layers */
+
+.masthead-background,
+.masthead-clouds-1,
+.masthead-clouds-2,
+.masthead-clouds-3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat-x;
+    background-size: 2000px auto;
+    background-position-y: bottom;
+    image-rendering: pixelated;
+}
+
+.masthead-background {
+    background-size: var(--sky-pixels-per-unit) auto;
+    background-image: url("../img/masthead/background.png");
+    animation: masthead-scroll 40s linear infinite;
+    z-index: 1;
+}
+
+.masthead-clouds-1 {
+    background-image: url("../img/masthead/clouds_1.png");
+    animation: masthead-scroll 30s linear infinite;
+    z-index: 2;
+}
+
+.masthead-clouds-2 {
+    background-image: url("../img/masthead/clouds_2.png");
+    animation: masthead-scroll 20s linear infinite;
+    z-index: 3;
+}
+
+.masthead-clouds-3 {
+    background-image: url("../img/masthead/clouds_3.png");
+    z-index: 4;
+    animation: masthead-scroll 10s linear infinite;
+}
+
+.masthead-content {
+    position: relative;
+    z-index: 5;
+    color: white;
+    text-align: center;
+}
+
+@keyframes vertical-sinus {
+    to {
+        transform: translateY(-12px);
+    }
+}
+
+#scroll-indicator {
+    --arrow-size: 64px;
+    --text-offset: 12px;
+    position: fixed;
+    bottom: 24px;
+    right: auto;
+    left: auto;
+    background-image: url('../img/down_arrow.png');
+    background-repeat: no-repeat;
+    background-size: var(--arrow-size) var(--arrow-size);
+    text-align: center;
+    background-position-x: center;
+    background-position-y: var(--text-offset);
+    image-rendering: pixelated;
+    width: calc(var(--arrow-size) * 2);
+    height: calc(var(--arrow-size) + var(--text-offset));
+    z-index: 1000;
+    animation: vertical-sinus 0.4s alternate infinite ease-in-out;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+}
+
+.text-shadow {
+    text-shadow: 0.03em 0.03em 0.03em #00000050;
+}
+
+.masthead h1 {
+    font-size: 8rem;
+}
+
+.pixel-icon {
+    image-rendering: pixelated;
+}
+
+.masthead h3 {
+    font-size: 3rem;
+}
+
+/* Reduces the font size of the masthead text on smaller screens */
+
+@media (max-width: 800px) {
+    .masthead h1 {
+        font-size: 4rem;
+    }
+    .masthead h3 {
+        font-size: 2.5rem;
+    }
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+.history-item,
+.strength-table,
+.btn {
+    font-size: 1.25rem;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.strength-table td,
+.strength-table th {
+    border-color: rgb(0, 0, 0, 0.2);
+}
+
+.history-date {
+    font-weight: 400;
+}
+
+.portfolio-item {
+    max-width: 530px;
+    margin: auto auto 1rem;
+    cursor: pointer;
+}
+
+.portfolio-item .caption {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.portfolio-item .caption .caption-content {
+    color: #fff;
+    margin: auto 5rem 5rem;
+}
+
+.portfolio-item .caption .caption-content h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.portfolio-item .caption .caption-content p {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.portfolio-item .portfolio-image {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: sepia(20%) brightness(0.6);
+}
+
+.portfolio-item:hover .portfolio-image {
+    transform: scale(1.05);
+    filter: sepia(0%) brightness(0.8);
+}
+
+@keyframes footer-scroll {
+    from {
+        background-position-x: 0px;
+    }
+    to {
+        background-position-x: 192px;
+    }
+}
+
+.separator {
+    height: calc(var(--sky-pixels-per-unit) * 2);
+    background-repeat: repeat-x;
+    background-size: var(--sky-pixels-per-unit) auto;
+    image-rendering: pixelated;
+    animation: masthead-scroll 40s linear infinite;
+}
+
+.gradient-sky-1-2,
+.gradient-sky-2-1 {
+    background-image: url("../img/gradients/gradient_1.png");
+}
+
+.gradient-sky-2-3,
+.gradient-sky-3-2 {
+    background-image: url("../img/gradients/gradient_2.png");
+}
+
+.gradient-sky-3-4,
+.gradient-sky-4-3 {
+    background-image: url("../img/gradients/gradient_3.png");
+}
+
+.gradient-sky-4-5,
+.gradient-sky-5-4 {
+    background-image: url("../img/gradients/gradient_4.png");
+}
+
+.gradient-sky-5-6,
+.gradient-sky-6-5 {
+    background-image: url("../img/gradients/gradient_5.png");
+}
+
+.gradient-sky-1-2,
+.gradient-sky-2-3,
+.gradient-sky-3-4,
+.gradient-sky-4-5,
+.gradient-sky-5-6 {
+    transform: scaleY(-1);
+}
+
+.bg-sky-1 {
+    background-color: var(--sky-color-1);
+}
+
+.bg-sky-2 {
+    background-color: var(--sky-color-2);
+}
+
+.bg-sky-3 {
+    background-color: var(--sky-color-3);
+}
+
+.bg-sky-4 {
+    background-color: var(--sky-color-4);
+}
+
+.bg-sky-5 {
+    background-color: var(--sky-color-5);
+}
+
+.bg-sky-6 {
+    background-color: var(--sky-color-6);
+}
+
+footer {
+    margin-top: -5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-image: url('../img/footer/grass.png');
+    background-repeat: repeat-x;
+    background-size: 192px auto;
+    animation: footer-scroll 1.5s linear infinite;
+    image-rendering: pixelated;
+}
+
+.social-link {
+    display: block;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4.3rem;
+    font-size: 1.5rem;
+    background-color: rgb(75, 129, 72);
+    transition: background-color 0.15s ease-in-out;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.social-link:hover {
+    background-color: rgb(39, 90, 37);
+    text-decoration: none;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(4px);
+    }
+    25% {
+        transform: translateY(6px);
+    }
+    40% {
+        transform: translateY(0);
+    }
+    60% {
+        transform: translateY(-3px);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+    90% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.footer-animation {
+    position: absolute;
+    margin-top: -200px;
+    height: 144px;
+    width: 144px;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    background-image: url('../img/footer/bike.apng');
+    background-size: 144px 144px;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    animation: bounce 8s cubic-bezier(0.65, 0, 0.35, 1) infinite alternate;
+}
+
+a {
+    color: #1D809F;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #155d74;
+}
+
+.btn {
+    border: none !important;
+}
+
+.btn-primary {
+    background-color: #4585ad !important;
+    color: #fff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #396683 !important;
+}
+
+.btn-secondary {
+    background-color: #ecb807 !important;
+    color: #fff !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+    background-color: #ba9106 !important;
+    border-color: #ba9106 !important;
+}
+
+.btn-dark {
+    color: #fff !important;
+}
+
+.btn {
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.bg-primary {
+    background-color: #1D809F !important;
+}
+
+.text-primary {
+    color: #1D809F !important;
+}
+
+.text-secondary {
+    color: #ecb807 !important;
+}
+
+#musicButton {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: auto;
+    font-size: 18px;
+    z-index: 1000;
+}
