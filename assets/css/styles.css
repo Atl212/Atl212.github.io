@@ -97,9 +97,16 @@ h6 {}
 }
 
 .masthead-background {
+    /* 背景画像のサイズを指定。横幅は変数で指定、縦幅は自動調整 */
     background-size: var(--sky-pixels-per-unit) auto;
+    
+    /* 背景画像を指定 */
     background-image: url("../img/masthead/background.png");
+    
+    /* 背景のスクロールアニメーションを適用。40秒間でリニア（一定速度）に無限ループ */
     animation: masthead-scroll 40s linear infinite;
+    
+    /* 要素のスタック順序を設定。1は背景として他の要素より後ろに表示 */
     z-index: 1;
 }
 
@@ -221,6 +228,12 @@ p {
     z-index: 1;
 }
 
+
+.portfolio-item .caption .caption-content-Abyss {
+    color: #fff;
+    margin: auto 8rem 0.5rem;
+}
+
 .portfolio-item .caption .caption-content {
     color: #fff;
     margin: auto 5rem 5rem;
@@ -238,12 +251,12 @@ p {
 
 .portfolio-item .portfolio-image {
     transition: transform 0.3s ease, filter 0.3s ease;
-    filter: sepia(20%) brightness(0.6);
+    filter: sepia(20%) brightness(0.8);
 }
 
 .portfolio-item:hover .portfolio-image {
     transform: scale(1.05);
-    filter: sepia(0%) brightness(0.8);
+    filter: sepia(0%) brightness(1);
 }
 
 @keyframes footer-scroll {
@@ -256,10 +269,19 @@ p {
 }
 
 .separator {
+    /* 要素の高さを、変数で指定された値の2倍に設定 */
     height: calc(var(--sky-pixels-per-unit) * 2);
+    
+    /* 背景画像をX軸方向（横方向）に繰り返し表示 */
     background-repeat: repeat-x;
+    
+    /* 背景画像のサイズを指定。横幅は変数、縦幅は自動調整 */
     background-size: var(--sky-pixels-per-unit) auto;
+    
+    /* ピクセルpixelアートのように画像を粗く表示 */
     image-rendering: pixelated;
+    
+    /* 背景のスクロールアニメーションを適用。40秒間でリニアに無限ループ */
     animation: masthead-scroll 40s linear infinite;
 }
 

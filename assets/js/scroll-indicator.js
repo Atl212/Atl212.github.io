@@ -1,5 +1,5 @@
 const scrollIndicator = document.getElementById('scroll-indicator');
-const delayBeforeShowingIndicator = 3000;
+const delayBeforeShowingIndicator = 1500;
 
 var scrollIndicatorEnabled = false;
 
@@ -10,9 +10,12 @@ updateArrowState = function() {
 
     if (window.scrollY === 0) {
         scrollIndicator.style.opacity = 1;
-    } else {
+    }
+    else {
         scrollIndicator.style.opacity = 0;
-        scrollIndicatorEnabled = false; // Disable the arrow indicator once the user has scrolled at least once.
+        
+        // Disable the arrow indicator once the user has scrolled at least once.
+        scrollIndicatorEnabled = false; 
     }
 }
 

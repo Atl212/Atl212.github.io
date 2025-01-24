@@ -1,812 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- ページの文字エンコーディングencoding設定 -->
+        <meta charset="utf-8">
+        <!-- デバイスdeviceに応じてレスポンシブresponsiveデザインを適用 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- 検索エンジンengine向けの説明文 -->
+        <meta name="description" content="French software engineer working in the video game industry, passionate about bread, pixel art, and game development.">
+        <!-- 著者情報 -->
+        <meta name="author" content="Atl212">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="French software engineer working in the video game industry, passionate about bread, pixel art, and game development.">
-    <meta name="author" content="Adrien GIVRY">
+        <!-- Open Graph (OG) プロパティproperty：SNSでのシェア時の表示情報 -->
+        <meta property="og:title" content="Atl212 - Software Engineer">
+        <meta property="og:description" content="French software engineer working in the video game industry, passionate about bread, pixel art, and game development.">
+        <meta property="og:image" content="https://adrien-givry.com/assets/img/social-thumbnail.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://atl212.github.io/">
 
-    <meta property="og:title" content="Adrien Givry - Software Engineer">
-    <meta property="og:description" content="French software engineer working in the video game industry, passionate about bread, pixel art, and game development.">
-    <meta property="og:image" content="https://adrien-givry.com/assets/img/social-thumbnail.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://adrien-givry.com">
+        <!-- タイトルtitleタグtag -->
+        <title>Atl212 - Software Engineer</title>
 
-    <title>Adrien Givry - Software Engineer</title>
+        <!-- ブラウザ(web) browserのタブに表示されるアイコンicon -->
+        <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
 
-    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+        <!-- ページのスクリプトscript：deferでHTML解析後に実行 -->
+        <script defer src="script.js" data-website-id="d807d228-f189-4dcb-8d1b-0ed7423828d9"></script>
+        
+        <!-- 外部CSSライブラリlibraryのリンク -->
+        <link href="assets/dist/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/dist/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/dist/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+        <link href="assets/dist/aos/css/aos.css" rel="stylesheet">
+        <link href="assets/css/styles.css" rel="stylesheet">
+    </head>
 
-    <script defer src="https://analytics.adrien-givry.com/script.js" data-website-id="d807d228-f189-4dcb-8d1b-0ed7423828d9"></script>
+    <body>
+        <!-- ページのヘッダーheaderセクションsection -->
+        <header class="masthead d-flex">
+            <!-- 背景や視覚エフェクトeffect -->
+            <div class="masthead-background aos-item" data-aos="fade-up"></div>
+            <div class="masthead-clouds-1 aos-item" data-aos="fade-up" data-aos-delay="0"></div>
+            <div class="masthead-clouds-2 aos-item" data-aos="fade-up" data-aos-delay="200"></div>
+            <div class="masthead-clouds-3 aos-item" data-aos="fade-up" data-aos-delay="400"></div>
 
-    <link href="assets/dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/dist/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/dist/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-    <link href="assets/dist/aos/css/aos.css" rel="stylesheet">
-    <link href="assets/css/styles.css" rel="stylesheet">
-</head>
+            <!-- メインmain コンテンツcontents -->
+            <div class="container masthead-content">
+                <h1 class="mb-1 aos-item text-shadow" data-aos="zoom-in" data-aos-delay="300">
+                    Atl212
+                </h1>
+                <h3 class="mb-5 aos-item text-shadow" data-aos="fade-right" data-aos-delay="500">
+                    Software Engineer
+                </h3>
+            </div>
 
-<body>
-    <header class="masthead d-flex">
-        <div class="masthead-background aos-item" data-aos="fade-up"></div>
-        <div class="masthead-clouds-1 aos-item" data-aos="fade-up" data-aos-delay="0"></div>
-        <div class="masthead-clouds-2 aos-item" data-aos="fade-up" data-aos-delay="200"></div>
-        <div class="masthead-clouds-3 aos-item" data-aos="fade-up" data-aos-delay="400"></div>
+            <!-- 下スクロールを促す要素 -->
+            <div id="scroll-indicator" class=""></div>
+        </header>
 
-        <div class="container masthead-content">
-            <h1 class="mb-1 aos-item text-shadow" data-aos="zoom-in" data-aos-delay="300">
-                Adrien Givry
-            </h1>
-            <h3 class="mb-5 aos-item text-shadow" data-aos="fade-right" data-aos-delay="500">
-                Software Engineer
-            </h3>
-        </div>
+        <!-- 音楽再生ボタン -->
+        <button id="musicButton" class="btn btn-primary" data-play-icon="fa fa-play" data-pause-icon="fa fa-pause" data-umami-event="Music Button">
+        </button>
 
-        <div id="scroll-indicator" class="">
-            <h5>SCROLL DOWN</h5>
-        </div>
-    </header>
+        <!-- 音楽再生用オーディオaudio -->
+        <audio id="audio" loop>
+            <source src="assets/musics/06 Suite no. 1, en sol majeur, pour.m4a" type="audio/mpeg">
+            <source src="assets/musics/06 Suite no. 2, en sol majeur, pour.m4a" type="audio/mpeg">
+            <source src="assets/musics/06 Suite no. 3, en sol majeur, pour.m4a" type="audio/mpeg">
+            <source src="assets/musics/06 Suite no. 4, en sol majeur, pour.m4a" type="audio/mpeg">
+            <source src="assets/musics/06 Suite no. 5, en sol majeur, pour.m4a" type="audio/mpeg">
+            <source src="assets/musics/06 Suite no. 6, en sol majeur, pour.m4a" type="audio/mpeg">
+        </audio>
 
-    <button id="musicButton" class="btn btn-primary" data-play-icon="fa fa-music" data-pause-icon="fa fa-pause" data-umami-event="Music Button"><span class="fa fa-music"></span></button>
+        <!-- ビジュアルvisual的なセパレーターseparator -->
+        <div class="separator gradient-sky-2-1"></div>
 
-    <!-- Background Music -->
-    <audio id="audio" loop>
-      <source src="assets/musics/littleroot_town.m4a" type="audio/mpeg">
-      <source src="assets/musics/littleroot_town.ogg" type="audio/ogg">
-      <source src="assets/musics/littleroot_town.mp3" type="audio/mp3">
-   </audio>
+        <!-- About -->
+        <section class="content-section bg-sky-1" id="about">
+            <div class="container text-center aos-item" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
 
+                        <div class="content-section-heading text-center"> 
+                            <h2 class="mb-5">
+                                <span class="sprite-icon align-middle" style="--x: 9; --y: 13;">
+                                </span> 
+                                &nbsp; Main Experience
+                            </h2>
+                        </div>
 
-    <div class="separator gradient-sky-2-1"></div>
+                        <ul class="mb-5 list-unstyled">
+                            <li class='history-item aos-item' data-aos='fade-in'>
+                                <span class='badge rounded-pill text-bg-dark history-date'>December 1997</span>
+                                <br> <b>Character created</b> 
+                            </li>
 
-    <!-- About -->
-    <section class="content-section bg-sky-1" id="about">
-        <div class="container text-center aos-item" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="content-section-heading text-center">
-                        <h2 class="mb-5">
+                            <li>
+                                <img src='assets/img/down_arrow.png' class='aos-item' data-aos='fade-in' data-aos-delay='200' width='20' alt=''>
+                            </li>
 
-                            <span class="sprite-icon align-text-bottom" style="--x: 9; --y: 13;"></span> &nbsp;Quest Journal</h2>
+                            <li class='history-item aos-item' data-aos='fade-in'>
+                                <span class='badge rounded-pill text-bg-dark history-date'>2012 - 2015</span>
+                                <br> <b><u>Main Quest I:</u> Graduated from a french high school</b> 
+                                <br>Physics, chemistry, maths, engineering and programming 
+                            </li>
+
+                        </ul>
                     </div>
-                    <ul class="mb-5 list-unstyled">
-                        <li class='history-item aos-item' data-aos='fade-in'>
-                            <span class='badge badge-dark badge-pill history-date'>December 1997</span><br> <b>Character created</b> </li>
-
-                        <li><img src='assets/img/down_arrow.png' class='aos-item' data-aos='fade-in' data-aos-delay='200' width='20' alt=''></li>
-                        <li class='history-item aos-item' data-aos='fade-in'>
-                            <span class='badge badge-dark badge-pill history-date'>2012 - 2015</span><br> <b><u>Main Quest I:</u> Graduated from a french high school</b> <br>Physics, chemistry, maths, engineering and programming </li>
-
-                        <li><img src='assets/img/down_arrow.png' class='aos-item' data-aos='fade-in' data-aos-delay='200' width='20' alt=''></li>
-                        <li class='history-item aos-item' data-aos='fade-in'>
-                            <span class='badge badge-dark badge-pill history-date'>2015-2017</span><br> <b><u>Main Quest II:</u> Obtained a Bachelor of Computer Science Equivalent (BTS in France)</b> <br>Web, software, network, economy, maths </li>
-
-                        <li><img src='assets/img/down_arrow.png' class='aos-item' data-aos='fade-in' data-aos-delay='200' width='20' alt=''></li>
-                        <li class='history-item aos-item' data-aos='fade-in'>
-                            <span class='badge badge-dark badge-pill history-date'>May 2016</span><br> <b><u>Side Quest I:</u> Software developer intern @ ADCI</b> <br>Development of a radio-identification module for construction </li>
-
-                        <li><img src='assets/img/down_arrow.png' class='aos-item' data-aos='fade-in' data-aos-delay='200' width='20' alt=''></li>
-                        <li class='history-item aos-item' data-aos='fade-in'>
-                            <span class='badge badge-dark badge-pill history-date'>January 2017</span><br> <b><u>Side Quest II:</u> Web developer intern @ Comedia Studio</b> <br>Development and deployment of an extranet website for file sharing </li>
-
-                        <li><img src='assets/img/down_arrow.png' class='aos-item' data-aos='fade-in' data-aos-delay='200' width='20' alt=''></li>
-                        <li class='history-item aos-item' data-aos='fade-in'>
-                            <span class='badge badge-dark badge-pill history-date'>August 2017</span><br> <b>Character transferred to NA servers</b> <br>Moved from France to Canada </li>
-
-                        <li><img src='assets/img/down_arrow.png' class='aos-item' data-aos='fade-in' data-aos-delay='200' width='20' alt=''></li>
-                        <li class='history-item aos-item' data-aos='fade-in'>
-                            <span class='badge badge-dark badge-pill history-date'>2017 - 2019</span><br> <b><u>Main Quest III:</u> Completed an engine programming course @ ISART Digital Montréal</b> <br>AEC in 2 years </li>
-
-                        <li><img src='assets/img/down_arrow.png' class='aos-item' data-aos='fade-in' data-aos-delay='200' width='20' alt=''></li>
-                        <li class='history-item aos-item' data-aos='fade-in'>
-                            <span class='badge badge-dark badge-pill history-date'>Feb. 2018 - Apr. 2018</span><br> <b><u>Side Quest III:</u> Gameplay programmer intern @ Broken Blast Bit</b> <br>In charge of the gameplay programming of a PC/Console game
-                            in an indie game collective </li>
-
-                        <li><img src='assets/img/down_arrow.png' class='aos-item' data-aos='fade-in' data-aos-delay='200' width='20' alt=''></li>
-                        <li class='history-item aos-item' data-aos='fade-in'>
-                            <span class='badge badge-dark badge-pill history-date'>July 2018</span><br> <b><u>Side Quest IV:</u> Engine programmer intern @ Voxel Farm</b> <br>Development of rendering features for a web voxel engine </li>
-
-                        <li><img src='assets/img/down_arrow.png' class='aos-item' data-aos='fade-in' data-aos-delay='200' width='20' alt=''></li>
-                        <li class='history-item aos-item' data-aos='fade-in'>
-                            <span class='badge badge-dark badge-pill history-date'>August 2018</span><br> <b><u>Side Quest V:</u> Mobile gameplay programmer intern @ APPLOZ</b> <br>Gameplay programming of 2 mobile games for Android and iOS </li>
-
-                        <li><img src='assets/img/down_arrow.png' class='aos-item' data-aos='fade-in' data-aos-delay='200' width='20' alt=''></li>
-                        <li class='history-item aos-item' data-aos='fade-in'>
-                            <span class='badge badge-dark badge-pill history-date'>June 2019 - April 2020</span><br> <b><u>Main Quest IV:</u> Engine programmer @ Gameloft</b> <br>Working on the in-house game engine </li>
-
-                        <li><img src='assets/img/down_arrow.png' class='aos-item' data-aos='fade-in' data-aos-delay='200' width='20' alt=''></li>
-                        <li class='history-item aos-item' data-aos='fade-in'>
-                            <span class='badge badge-dark badge-pill history-date'>May 2020 - April 2023</span><br> <b><u>Main Quest V:</u> 3D programmer @ Ubisoft</b> <br>Developing cutting-edge systems for Rainbow Six Mobile before joining Anvil rendering
-                            team </li>
-
-                        <li><img src='assets/img/down_arrow.png' class='aos-item' data-aos='fade-in' data-aos-delay='200' width='20' alt=''></li>
-                        <li class='history-item aos-item' data-aos='fade-in'>
-                            <span class='badge badge-dark badge-pill history-date'>May 2023 - Now</span><br> <b><u>Main Quest VI:</u> Software Engineer @ SkyBox Labs</b> <br>Working on graphics for the Switch &amp; Android editions of Minecraft </li>
-
-                    </ul>
                 </div>
+                <a class="btn btn-primary js-scroll-trigger aos-item" data-aos="zoom-in" data-aos-delay="300" href="docs/cv.pdf" target="_blank" data-umami-event="CV Button">
+                    Take a Peek at my CV 
+                    <span class='fa fa-file-text-o'></span>
+                </a>
             </div>
-            <a class="btn btn-primary js-scroll-trigger aos-item" data-aos="zoom-in" data-aos-delay="300" href="docs/cv.pdf" target="_blank" data-umami-event="CV Button">Take a Peek at my CV <span class='fa fa-file-text-o'></span></a>
-        </div>
-    </section>
+        </section>
+
+        <div class="separator gradient-sky-1-2"></div>
+        <div class="separator gradient-sky-2-3"></div>
 
 
-    <div class="separator gradient-sky-1-2"></div>
-    <div class="separator gradient-sky-2-3"></div>
+        <!-- Portfolio -->
+        <section class="content-section bg-sky-3" id="portfolio">
+            <div class="container aos-item" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
+                <div class="content-section-heading text-center">
+                    <h2 class="mb-5">
 
-    <!-- Strengths -->
-    <section class="content-section bg-sky-3" id="strengths">
-        <div class="container text-center" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
-            <div class="content-section-heading text-center">
-                <h2 class="mb-5">
+                        <span class="sprite-icon align-middle" style="--x: 19; --y: 3;"></span> &nbsp;Programming Project
+                    </h2>
+                </div>
 
-                    <span class="sprite-icon align-text-bottom" style="--x: 19; --y: 6;"></span> &nbsp;Character Stats</h2>
-            </div>
-            <table class="table strength-table">
-                <tbody>
-                    <tr class='aos-item' data-aos='fade-in'>
-                        <th scope='row'>
+                <div class="row no-gutters">
+                    <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
+                        <a data-bs-toggle="modal" data-bs-target="#modalTheAbyss">
+                            <span class="caption">
+                            </span>
 
-                            <span class="sprite-icon align-text-bottom" style="--x: 10; --y: 2;"></span>
-                        </th>
-                        <td class='align-middle' align='left'><b>+3 Team Boost</b></td>
-                        <td class='align-middle'>All your meetings will start with elevator music</td>
-                    </tr>
-                    <tr class='aos-item' data-aos='fade-in'>
-                        <th scope='row'>
-
-                            <span class="sprite-icon align-text-bottom" style="--x: 3; --y: 15;"></span>
-                        </th>
-                        <td class='align-middle' align='left'><b>+4 Defense</b></td>
-                        <td class='align-middle'>I&#039;ll fortify systems with a solid architecture</td>
-                    </tr>
-                    <tr class='aos-item' data-aos='fade-in'>
-                        <th scope='row'>
-
-                            <span class="sprite-icon align-text-bottom" style="--x: 16; --y: 7;"></span>
-                        </th>
-                        <td class='align-middle' align='left'><b>+2 Strength</b></td>
-                        <td class='align-middle'>Strong smell in the fridge? Probably my cheese</td>
-                    </tr>
-                    <tr class='aos-item' data-aos='fade-in'>
-                        <th scope='row'>
-
-                            <span class="sprite-icon align-text-bottom" style="--x: 10; --y: 3;"></span>
-                        </th>
-                        <td class='align-middle' align='left'><b>+5 Energy</b></td>
-                        <td class='align-middle'>Talented coffee brewer</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-
-    <div class="separator gradient-sky-3-4"></div>
-    <div class="separator gradient-sky-4-5"></div>
-
-    <!-- Portfolio -->
-    <section class="content-section bg-sky-5" id="portfolio">
-        <div class="container aos-item" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
-            <div class="content-section-heading text-center">
-                <h2 class="mb-5">
-
-                    <span class="sprite-icon align-text-bottom" style="--x: 19; --y: 3;"></span> &nbsp;Achievements
-                </h2>
-            </div>
-            <div class="row no-gutters">
-                <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <a data-toggle="modal" data-target="#modalMinecraft">
-    <span class="caption">
-        <span class="caption-content">
-            <h2>Minecraft</h2>
-            <p class="mb-0">World&#039;s Best-Selling Game</p>
-        </span>
-    </span>
-    <img class="img-fluid portfolio-image" src="assets/img/portfolio/minecraft.jpg" alt="Minecraft" width="600" height="338">
-    </a>
-                </div>
-                <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <a data-toggle="modal" data-target="#modalMythril2D">
-    <span class="caption">
-        <span class="caption-content">
-            <h2>Mythril2D</h2>
-            <p class="mb-0">Action RPG Engine</p>
-        </span>
-    </span>
-    <img class="img-fluid portfolio-image" src="assets/img/portfolio/mythril2d.jpg" alt="Mythril2D" width="600" height="338">
-    </a>
-                </div>
-                <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <a data-toggle="modal" data-target="#modalAnvil">
-    <span class="caption">
-        <span class="caption-content">
-            <h2>Anvil</h2>
-            <p class="mb-0">Ubisoft proprietary game engine (C++/DX12/Vulkan/GNM)</p>
-        </span>
-    </span>
-    <img class="img-fluid portfolio-image" src="assets/img/portfolio/anvil.jpg" alt="Anvil" width="600" height="338">
-    </a>
-                </div>
-                <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <a data-toggle="modal" data-target="#modalAssassin&#039;s Creed Shadows">
-    <span class="caption">
-        <span class="caption-content">
-            <h2>Assassin&#039;s Creed Shadows</h2>
-            <p class="mb-0">Assassin&#039;s Creed set in feudal Japan</p>
-        </span>
-    </span>
-    <img class="img-fluid portfolio-image" src="assets/img/portfolio/ac_shadows.jpg" alt="Assassin&#039;s Creed Shadows" width="600" height="338">
-    </a>
-                </div>
-                <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <a data-toggle="modal" data-target="#modalRainbow Six Mobile">
-    <span class="caption">
-        <span class="caption-content">
-            <h2>Rainbow Six Mobile</h2>
-            <p class="mb-0">Free-to-play competitive multiplayer mobile FPS (C#/Unity)</p>
-        </span>
-    </span>
-    <img class="img-fluid portfolio-image" src="assets/img/portfolio/rainbow_six_mobile.jpg" alt="Rainbow Six Mobile" width="600" height="338">
-    </a>
-                </div>
-                <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <a data-toggle="modal" data-target="#modalLego Star Wars: Castaway">
-    <span class="caption">
-        <span class="caption-content">
-            <h2>Lego Star Wars: Castaway</h2>
-            <p class="mb-0">Apple Arcade Exclusive Lego Star Wars Game</p>
-        </span>
-    </span>
-    <img class="img-fluid portfolio-image" src="assets/img/portfolio/star_wars_castaway.jpg" alt="Lego Star Wars: Castaway" width="600" height="338">
-    </a>
-                </div>
-                <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <a data-toggle="modal" data-target="#modalBallistic Baseball">
-    <span class="caption">
-        <span class="caption-content">
-            <h2>Ballistic Baseball</h2>
-            <p class="mb-0">Apple Arcade Exclusive Baseball Game</p>
-        </span>
-    </span>
-    <img class="img-fluid portfolio-image" src="assets/img/portfolio/ballistic_baseball.jpg" alt="Ballistic Baseball" width="600" height="338">
-    </a>
-                </div>
-                <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <a data-toggle="modal" data-target="#modalOverdrive City">
-    <span class="caption">
-        <span class="caption-content">
-            <h2>Overdrive City</h2>
-            <p class="mb-0">Build and race your dream car collection</p>
-        </span>
-    </span>
-    <img class="img-fluid portfolio-image" src="assets/img/portfolio/overdrive_city.jpg" alt="Overdrive City" width="600" height="338">
-    </a>
-                </div>
-                <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <a data-toggle="modal" data-target="#modalOverload">
-    <span class="caption">
-        <span class="caption-content">
-            <h2>Overload</h2>
-            <p class="mb-0">Open-Source 3D Game Engine (C++/OpenGL)</p>
-        </span>
-    </span>
-    <img class="img-fluid portfolio-image" src="assets/img/portfolio/overload.jpg" alt="Overload" width="600" height="338">
-    </a>
-                </div>
-                <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <a data-toggle="modal" data-target="#modalSimplex Engine">
-    <span class="caption">
-        <span class="caption-content">
-            <h2>Simplex Engine</h2>
-            <p class="mb-0">Software rendered game engine (C++)</p>
-        </span>
-    </span>
-    <img class="img-fluid portfolio-image" src="assets/img/portfolio/simplex_engine.jpg" alt="Simplex Engine" width="600" height="338">
-    </a>
-                </div>
-                <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <a data-toggle="modal" data-target="#modalSuper Alchemist">
-    <span class="caption">
-        <span class="caption-content">
-            <h2>Super Alchemist</h2>
-            <p class="mb-0">Potion crafting and memory mobile game (Unity)</p>
-        </span>
-    </span>
-    <img class="img-fluid portfolio-image" src="assets/img/portfolio/super_alchemist.jpg" alt="Super Alchemist" width="600" height="338">
-    </a>
-                </div>
-                <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <a data-toggle="modal" data-target="#modalAnimation Engine">
-    <span class="caption">
-        <span class="caption-content">
-            <h2>Animation Engine</h2>
-            <p class="mb-0">Custom skeletal animation system (C++/OpenGL)</p>
-        </span>
-    </span>
-    <img class="img-fluid portfolio-image" src="assets/img/portfolio/animation_programming.jpg" alt="Animation Engine" width="600" height="338">
-    </a>
-                </div>
-                <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <a data-toggle="modal" data-target="#modalSpiritual Journey">
-    <span class="caption">
-        <span class="caption-content">
-            <h2>Spiritual Journey</h2>
-            <p class="mb-0">Artsy 2D platformer (C#/Unity)</p>
-        </span>
-    </span>
-    <img class="img-fluid portfolio-image" src="assets/img/portfolio/spiritual_journey.jpg" alt="Spiritual Journey" width="600" height="338">
-    </a>
-                </div>
-                <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <a data-toggle="modal" data-target="#modalElkCraft">
-    <span class="caption">
-        <span class="caption-content">
-            <h2>ElkCraft</h2>
-            <p class="mb-0">Minecraft clone (C++/OpenGL)</p>
-        </span>
-    </span>
-    <img class="img-fluid portfolio-image" src="assets/img/portfolio/elkcraft.jpg" alt="ElkCraft" width="600" height="338">
-    </a>
-                </div>
-                <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <a data-toggle="modal" data-target="#modalSuper Galaxy Archetype">
-    <span class="caption">
-        <span class="caption-content">
-            <h2>Super Galaxy Archetype</h2>
-            <p class="mb-0">3D platformer (Unreal Engine)</p>
-        </span>
-    </span>
-    <img class="img-fluid portfolio-image" src="assets/img/portfolio/super_galaxy_archetype.jpg" alt="Super Galaxy Archetype" width="600" height="338">
-    </a>
-                </div>
-                <div class="col-lg-12 aos-item embed-responsive embed-responsive-16by9 portfolio-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/o7DRa1kUxfQ" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Modals -->
-    <div class="modal fade" id="modalMinecraft" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Minecraft</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>Working on Minecraft&#039;s graphics support team, optimizing Minecraft Bedrock Edition for various platforms like Switch, Android, and Windows.</p>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" href="https://www.minecraft.net/en-us" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Website" data-umami-event-project="Minecraft">
-        Website&nbsp;<i class="fa fa-globe"></i>
-    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modalMythril2D" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Mythril2D</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>Unleash your creativity with Mythril2D! Create breathtaking 2D Action RPG games without any coding. From epic quests to thrilling battles, bring your games to life in no time.</p>
-                    <ul>
-                        <li>Team size: 1</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" href="https://prf.hn/click/camref:1100l3L8uv/destination:https://assetstore.unity.com/packages/templates/systems/2d-action-rpg-engine-mythril2d-249375" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Website"
-                        data-umami-event-project="Mythril2D">
-        Website&nbsp;<i class="fa fa-globe"></i>
-    </a>
-                    <a class="btn btn-primary" href="https://youtu.be/iisWF6t9VJQ" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Trailer" data-umami-event-project="Mythril2D">
-        Trailer&nbsp;<i class="icon-social-youtube"></i>
-    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modalAnvil" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Anvil</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>Worked as a 3D programmer on the low-level rendering team (Anvil Pipeline). In charge of the addition and support of the latest up-scaling technologies (FSR2, XeSS), and the maintenance of Anvil&#039;s graphics backends for PC and
-                        consoles, as well as supporting production teams with their game projects (AC Codename Red).</p>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" href="https://en.wikipedia.org/wiki/Ubisoft_Anvil" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Website" data-umami-event-project="Anvil">
-        Website&nbsp;<i class="fa fa-globe"></i>
-    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modalAssassin&#039;s Creed Shadows" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Assassin&#039;s Creed Shadows</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>Worked as a 3D programmer on Anvil, Ubisoft&#039;s game engine behind the Assassin&#039;s Creed franchise. Supported the development team by debugging and optimizing the engine for the needs of the production.</p>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" href="https://www.ubisoft.com/en-ca/game/assassins-creed/shadows" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Website" data-umami-event-project="Assassin&#039;s Creed Shadows">
-        Website&nbsp;<i class="fa fa-globe"></i>
-    </a>
-                    <a class="btn btn-primary" href="https://www.youtube.com/watch?v=vovkzbtYBC8" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Trailer" data-umami-event-project="Assassin&#039;s Creed Shadows">
-        Trailer&nbsp;<i class="icon-social-youtube"></i>
-    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modalRainbow Six Mobile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Rainbow Six Mobile</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>Worked as a 3D programmer on this project; implementing new and adapting existing systems for mobile devices, such as a sector occlusion system (dynamic occlusion system supporting R6&#039;s destruction system), an eye adaptation visual
-                        effect (auto-exposure) and a debug layer system. Co-authored a scientific research and experimental development paper (SR&amp;ED) for the government of Canada.</p>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" href="https://www.ubisoft.com/en-ca/game/rainbow-six/mobile" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Website" data-umami-event-project="Rainbow Six Mobile">
-        Website&nbsp;<i class="fa fa-globe"></i>
-    </a>
-                    <a class="btn btn-primary" href="https://www.youtube.com/watch?v=sTIlYH7IFfQ" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Trailer" data-umami-event-project="Rainbow Six Mobile">
-        Trailer&nbsp;<i class="icon-social-youtube"></i>
-    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modalLego Star Wars: Castaway" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Lego Star Wars: Castaway</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>Worked as an engine programmer on Gameloft&#039;s proprietary game engine behind Lego Star Wars: Castaway. Supported the game development team by debugging, optimizing, and implementing tools for the needs of the production, including
-                        the development of a shader editor to give technical artists the ability to create visual effects without coding.</p>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" href="https://www.starwars.com/games-apps/lego-star-wars-castaways" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Website" data-umami-event-project="Lego Star Wars: Castaway">
-        Website&nbsp;<i class="fa fa-globe"></i>
-    </a>
-                    <a class="btn btn-primary" href="https://www.youtube.com/watch?v=q22m9zc6ZgQ" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Demo" data-umami-event-project="Lego Star Wars: Castaway">
-        Demo&nbsp;<i class="icon-social-youtube"></i>
-    </a>
-                    <a class="btn btn-secondary" href="https://apps.apple.com/app/lego-star-wars-castaways/id1474344996?ign-itscg=30800&amp;ign-itsct=legostarwarscastaways" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Download" data-umami-event-project="Lego Star Wars: Castaway">
-        Download&nbsp;<i class="fa fa-mobile"></i>
-    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modalBallistic Baseball" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Ballistic Baseball</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>Worked as an engine programmer on Gameloft&#039;s proprietary game engine behind Ballistic Baseball. Supported the game development team by debugging, optimizing, and implementing tools for the needs of the production.</p>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" href="https://www.gameloft.com/game/ballistic-baseball" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Website" data-umami-event-project="Ballistic Baseball">
-        Website&nbsp;<i class="fa fa-globe"></i>
-    </a>
-                    <a class="btn btn-primary" href="https://www.youtube.com/watch?v=3QwqOMYgod4" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Demo" data-umami-event-project="Ballistic Baseball">
-        Demo&nbsp;<i class="icon-social-youtube"></i>
-    </a>
-                    <a class="btn btn-secondary" href="https://apps.apple.com/us/app/ballistic-baseball/id1453534391" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Download" data-umami-event-project="Ballistic Baseball">
-        Download&nbsp;<i class="fa fa-mobile"></i>
-    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modalOverdrive City" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Overdrive City</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>Worked as an engine programmer on Gameloft&#039;s proprietary game engine behind Overdrive City Supporting the game development team by debugging, optimizing, and implementing tools for the needs of the production.</p>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" href="https://www.gameloft.com/en/game/overdrive-city" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Website" data-umami-event-project="Overdrive City">
-        Website&nbsp;<i class="fa fa-globe"></i>
-    </a>
-                    <a class="btn btn-primary" href="https://www.youtube.com/watch?v=w-XEJkOz7oM" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Trailer" data-umami-event-project="Overdrive City">
-        Trailer&nbsp;<i class="icon-social-youtube"></i>
-    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modalOverload" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Overload</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>Overload is a 3D game engine with a custom made editor, featuring a scripting system, scene editor, material editor, custom shader support and more. This project is my graduation project (Game engine AEC/ACS). I was in charge of the
-                        development of the core of the engine (Scene system, scripting, resource management) but I helped my classmates on physics, audio and rendering. Overload is now an open-source project on GitHub with 1k+ stars.</p>
-                    <ul>
-                        <li>Team size: 3</li>
-                        <li>Project duration: 5 months</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" href="https://www.youtube.com/watch?v=ARXSJh-ZMHM" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Demo" data-umami-event-project="Overload">
-        Demo&nbsp;<i class="icon-social-youtube"></i>
-    </a>
-                    <a class="btn btn-primary" href="https://github.com/adriengivry/Overload" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="GitHub" data-umami-event-project="Overload">
-        GitHub&nbsp;<i class="icon-social-github"></i>
-    </a>
-                    <a class="btn btn-secondary" href="https://github.com/adriengivry/Overload/releases/" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Download" data-umami-event-project="Overload">
-        Download&nbsp;<i class="fa fa-windows"></i>
-    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modalSimplex Engine" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Simplex Engine</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>A simple game engine using a custom made software renderer.</p>
-                    <ul>
-                        <li>Team size: 1</li>
-                        <li>Project duration: 1 week</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" href="https://github.com/adriengivry/SimplexEngine" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="GitHub" data-umami-event-project="Simplex Engine">
-        GitHub&nbsp;<i class="icon-social-github"></i>
-    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modalSuper Alchemist" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Super Alchemist</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>A potion crafting and memory mobile game made with Unity when I was gameplay programmer at APPLOZ.</p>
-                    <ul>
-                        <li>Team size: 3</li>
-                        <li>Project duration: 1 month</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.APPLOZ.SuperAlchemist" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Download" data-umami-event-project="Super Alchemist">
-        Download&nbsp;<i class="fa fa-android"></i>
-    </a>
-                    <a class="btn btn-secondary" href="https://itunes.apple.com/ca/app/super-alchemist/id1435364226?mt=8" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Download" data-umami-event-project="Super Alchemist">
-        Download&nbsp;<i class="fa fa-mobile"></i>
-    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modalAnimation Engine" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Animation Engine</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>A skeletal animation system with key frames interpolation, timeline navigation and transitions.</p>
-                    <ul>
-                        <li>Team size: 1</li>
-                        <li>Project duration: 2 weeks</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" href="https://youtu.be/PzjegVRmqRU" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Demo" data-umami-event-project="Animation Engine">
-        Demo&nbsp;<i class="icon-social-youtube"></i>
-    </a>
-                    <a class="btn btn-primary" href="https://github.com/adriengivry/AnimationProgramming" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="GitHub" data-umami-event-project="Animation Engine">
-        GitHub&nbsp;<i class="icon-social-github"></i>
-    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modalSpiritual Journey" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Spiritual Journey</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>Spiritual Journey is a 2D platformer with a parallax scrolling background made in Unity. This was made in 4 days during the ISART Digital&#039;s 2018 Game Week. We were 8 on this project, 3 artists, 3 game designers and 2 game programers.</p>
-                    <ul>
-                        <li>Team size: 8</li>
-                        <li>Project duration: 4 days</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" href="https://www.youtube.com/watch?v=LjKhd76MwDE" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Demo" data-umami-event-project="Spiritual Journey">
-        Demo&nbsp;<i class="icon-social-youtube"></i>
-    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modalElkCraft" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">ElkCraft</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>Minecraft clone made with C++ and OpenGL</p>
-                    <ul>
-                        <li>Team size: 4</li>
-                        <li>Project duration: 5 weeks</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" href="https://www.youtube.com/watch?v=nEBbEZcri08" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Demo" data-umami-event-project="ElkCraft">
-        Demo&nbsp;<i class="icon-social-youtube"></i>
-    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modalSuper Galaxy Archetype" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="exampleModalLongTitle">Super Galaxy Archetype</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <p>Mario-style 3D platformer made with Unreal Engine.</p>
-                    <ul>
-                        <li>Team size: 2</li>
-                        <li>Project duration: 1 week</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-primary" href="https://www.youtube.com/watch?v=NPqQ7DUOLYE" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Demo" data-umami-event-project="Super Galaxy Archetype">
-        Demo&nbsp;<i class="icon-social-youtube"></i>
-    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="separator gradient-sky-5-4"></div>
-    <div class="separator gradient-sky-4-3"></div>
-
-    <!-- Contact -->
-    <section class="content-section bg-sky-3" id="contact">
-        <div class="container text-center aos-item" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="content-section-heading text-center">
-                        <h2 class="mb-5">
-
-                            <span class="sprite-icon align-text-bottom" style="--x: 0; --y: 10;"></span> &nbsp;Contact
-                        </h2>
+                            <img class="img-fluid portfolio-image" 
+                            src="assets/img/portfolio/The_Abyss.png" 
+                            alt="The Abyss" width="600" height="338">
+                        </a>
                     </div>
-                    <div class="aos-item" data-aos="fade-up" data-aos-duration="500" data-aos-offset="100">
-                        <p>Let's make some <u><b>EPIC</b></u> games together (no pun intended).</p>
-                        <p>Skyrim is the best "Elder Scrolls" game - change my mind.</p>
-                        <a class="btn btn-primary js-scroll-trigger" href="mailto:contact@adrien-givry.com" data-umami-event="Email Button">Take Your Game to the <u>NEXT LEVEL</u> <span class="fa fa-envelope-o"></span></a>
+                    
+                    <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
+                        <a data-bs-toggle="modal" data-bs-target="#modalLegoStarWars:Castaway">
+                            <span class="caption">
+                                <span class="caption-content">
+                                    <h2>Lego Star Wars: Castaway</h2>
+                                    <p class="mb-0">Apple Arcade Exclusive Lego Star Wars Game</p>
+                                </span>
+                            </span>
+
+                            <img class="img-fluid portfolio-image" 
+                            src="assets/img/portfolio/star_wars_castaway.jpg" 
+                            alt="Lego Star Wars: Castaway" width="600" height="338">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Modals -->
+        <div class="modal fade" id="modalTheAbyss" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModalLongTitle">The Abyss&nbsp;</h2>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>Unleash your creativity with Mythril2D! Create breathtaking 2D Action RPG games without any coding. 
+                            From epic quests to thrilling battles, bring your games to life in no time.
+                        </p>
+                        <ul>
+                            <li>Team size: 1</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a class="btn btn-primary" 
+                            href="https://prf.hn/click/camref:1100l3L8uv/destination:https://assetstore.unity.com/packages/templates/systems/2d-action-rpg-engine-mythril2d-249375" 
+                            target="_blank" data-umami-event="Project Action Button" 
+                            data-umami-event-action-type="Website"
+                            data-umami-event-project="TheAbyss">
+                            Website&nbsp;
+                            <i class="fa fa-globe"></i>
+                        </a>
+
+                        <a class="btn btn-primary" href="https://www.youtube.com/watch?v=SxWc_csyor4" 
+                            target="_blank" data-umami-event="Project Action Button" 
+                            data-umami-event-action-type="Trailer" data-umami-event-project="TheAbyss">
+                            Trailer&nbsp;<i class="icon-social-youtube"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <div class="separator bg-sky-3"></div>
-    <div class="separator bg-sky-3"></div>
+        <div class="modal fade" id="modalLegoStarWars:Castaway" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModalLongTitle">Lego Star Wars: Castaway</h2>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
 
-    <footer class="text-center">
-        <span class="footer-animation"></span>
-        <div class="container">
-            <ul class="list-inline mb-5">
-                <li class="list-inline-item aos-item" data-aos="flip-left" data-aos-offset="100" data-aos-duration="1000" data-aos-delay="0" data-aos-once="true">
-                    <a class="social-link rounded-circle text-white" href="https://www.linkedin.com/in/adrien-givry/" target="_blank" data-umami-event="LinkedIn Button">
-            <i class="icon-social-linkedin"></i>
-            </a>
-                </li>
-                <li class="list-inline-item aos-item" data-aos="flip-left" data-aos-offset="100" data-aos-duration="1000" data-aos-delay="250" data-aos-once="true">
-                    <a class="social-link rounded-circle text-white" href="https://github.com/adriengivry" target="_blank" data-umami-event="GitHub Button">
-            <i class="icon-social-github"></i>
-            </a>
-                </li>
-                <li class="list-inline-item aos-item" data-aos="flip-left" data-aos-offset="100" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true">
-                    <a class="social-link rounded-circle text-white" href="mailto:contact@adrien-givry.com" target="_blank" data-umami-event="Email Button (Footer)">
-            <i class="icon-envelope"></i>
-            </a>
-                </li>
-                <li class="list-inline-item aos-item" data-aos="flip-left" data-aos-offset="100" data-aos-duration="1000" data-aos-delay="750" data-aos-once="true">
-                    <a class="social-link rounded-circle text-white" href="https://www.youtube.com/@gyvr" target="_blank" data-umami-event="YouTube Button">
-            <i class="icon-social-youtube"></i>
-            </a>
-                </li>
-            </ul>
-            <p class="text-black mb-0">Wow, you read all the way to here?</p>
-            <p class="text-black mb-0">I hope you at least clicked a few buttons.</p>
+                    <div class="modal-body">
+                        <p>Worked as an engine programmer on Gameloft&#039;s proprietary game engine behind Lego Star Wars: Castaway. 
+                            Supported the game development team by debugging, optimizing, and implementing tools for the needs of the production, 
+                            including the development of a shader editor to give technical artists the ability to create visual effects without coding.</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a class="btn btn-primary" href="https://www.starwars.com/games-apps/lego-star-wars-castaways" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Website" data-umami-event-project="Lego Star Wars: Castaway">
+                            Website&nbsp;<i class="fa fa-globe"></i>
+                        </a>
+
+                        <a class="btn btn-primary" 
+                            href="https://www.youtube.com/watch?v=q22m9zc6ZgQ" 
+                            target="_blank" data-umami-event="Project Action Button" 
+                            data-umami-event-action-type="Demo" data-umami-event-project="Lego Star Wars: Castaway">
+                            Demo&nbsp;
+                            <i class="icon-social-youtube"></i>
+                        </a>
+                        <a class="btn btn-secondary" href="https://apps.apple.com/app/lego-star-wars-castaways/id1474344996?ign-itscg=30800&amp;ign-itsct=legostarwarscastaways" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Download" data-umami-event-project="Lego Star Wars: Castaway">
+                            Download&nbsp;<i class="fa fa-mobile"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-    <script src="assets/dist/jquery/jquery.min.js"></script>
-    <script src="assets/dist/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/dist/aos/js/aos.js"></script>
-    <script src="assets/js/aos.js"></script>
 
-    <script src="assets/js/audio.js"></script>
-    <script src="assets/js/scroll-indicator.js"></script>
-</body>
+        <div class="separator gradient-sky-3-4"></div>
+        <div class="separator gradient-sky-4-5"></div>
 
+        <!-- Strengths -->
+        <section class="content-section bg-sky-5" id="strengths">
+            <div class="container text-center aos-init aos-animate" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
+                <div class="content-section-heading text-center">
+                    <h2 class="mb-5">
+                        <span class="sprite-icon align-text-bottom" style="--x: 19; --y: 6;"></span> 
+                        &nbsp;Paintings
+                    </h2>
+                </div>
+
+                <table class="table strength-table">
+                    <tbody>
+                        <tr class='aos-item aos-init aos-animate' data-aos='fade-in'>
+                            <th scope='row'>
+
+                                <span class="sprite-icon align-text-bottom" style="--x: 10; --y: 2;"></span>
+                            </th>
+                            <td class='align-middle' align='left'><b>+3 Team Boost</b></td>
+                            <td class='align-middle'>All your meetings will start with elevator music</td>
+                        </tr>
+
+                        <tr class='aos-item aos-init aos-animate' data-aos='fade-in'>
+                            <th scope='row'>
+
+                                <span class="sprite-icon align-text-bottom" style="--x: 3; --y: 15;"></span>
+                            </th>
+                            <td class='align-middle' align='left'><b>+4 Defense</b></td>
+                            <td class='align-middle'>I&#039;ll fortify systems with a solid architecture</td>
+                        </tr>
+
+                        <tr class='aos-item aos-init aos-animate' data-aos='fade-in'>
+                            <th scope='row'>
+
+                                <span class="sprite-icon align-text-bottom" style="--x: 16; --y: 7;"></span>
+                            </th>
+                            <td class='align-middle' align='left'><b>+2 Strength</b></td>
+                            <td class='align-middle'>Strong smell in the fridge? Probably my cheese</td>
+                        </tr>
+
+                        <tr class='aos-item aos-init aos-animate' data-aos='fade-in'>
+                            <th scope='row'>
+
+                                <span class="sprite-icon align-text-bottom" style="--x: 10; --y: 3;"></span>
+                            </th>
+                            <td class='align-middle' align='left'><b>+5 Energy</b></td>
+                            <td class='align-middle'>Talented coffee brewer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <div class="separator gradient-sky-5-4"></div>
+        <div class="separator gradient-sky-4-3"></div>
+
+        <!-- Contact -->
+        <section class="content-section bg-sky-3" id="contact">
+            <div class="container text-center aos-item" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="content-section-heading text-center">
+                            <h2 class="mb-5">
+                                <span class="sprite-icon align-middle" style="--x: 0; --y: 10;"></span> &nbsp;Contact
+                            </h2>
+                        </div>
+                        <div class="aos-item" data-aos="fade-up" data-aos-duration="500" data-aos-offset="100">
+                            <p>Let's make some <u><b>EPIC</b></u> games together (no pun intended).</p>
+                            <p>Skyrim is the best "Elder Scrolls" game - change my mind.</p>
+                            <a class="btn btn-primary js-scroll-trigger" href="mailto:contact@adrien-givry.com" data-umami-event="Email Button">
+                                Take Your Game to the 
+                                <u>NEXT LEVEL</u> 
+                                <span class="fa fa-envelope-o">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="separator bg-sky-3"></div>
+        <div class="separator bg-sky-3"></div>
+
+        <footer class="text-center">
+            <span class="footer-animation"></span>
+            <div class="container">
+                <ul class="list-inline mb-5">
+                    <li class="list-inline-item aos-item" data-aos="flip-left" data-aos-offset="100" data-aos-duration="1000" data-aos-delay="250" data-aos-once="true">
+                        <a class="social-link rounded-circle text-white" href="https://github.com/adriengivry" target="_blank" data-umami-event="GitHub Button">
+                            <i class="icon-social-github"></i>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item aos-item" data-aos="flip-left" data-aos-offset="100" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true">
+                        <a class="social-link rounded-circle text-white" href="mailto:contact@adrien-givry.com" target="_blank" data-umami-event="Email Button (Footer)">
+                            <i class="icon-envelope"></i>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item aos-item" data-aos="flip-left" data-aos-offset="100" data-aos-duration="1000" data-aos-delay="750" data-aos-once="true">
+                        <a class="social-link rounded-circle text-white" href="https://www.youtube.com/@gyvr" target="_blank" data-umami-event="YouTube Button">
+                            <i class="icon-social-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text-black mb-0">Wow, you read all the way to here?</p>
+                <p class="text-black mb-0">I hope you at least clicked a few buttons.</p>
+            </div>
+        </footer>
+        <script src="assets/dist/jquery/jquery-3.7.1.min.js"></script>
+        <script src="assets/dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/dist/aos/js/aos.js"></script>
+        <script src="assets/js/aos.js"></script>
+
+        <script src="assets/js/audio.js"></script>
+        <script src="assets/js/scroll-indicator.js"></script>
+    </body>
 </html>
