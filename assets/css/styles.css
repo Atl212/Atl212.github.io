@@ -22,26 +22,10 @@ body {
     background-color: var(--hole-color-1);
 }
 
-.sprite-icon {
-    --size: 24px;
-    /* Default size of one sprite */
-    --scale: 2;
-    --image-width: 480px;
-    --image-height: 384px;
-    --x: 0;
-    --y: 0;
-    height: calc(var(--size) * var(--scale));
-    width: calc(var(--size) * var(--scale));
-    background-image: url('../img/pkm-icons.png');
-    background-size: calc(var(--image-width) * var(--scale)) calc(var(--image-height) * var(--scale));
-    background-position: calc(var(--x) * var(--scale) * var(--size) * -1) calc(var(--y) * var(--scale) * var(--size) * -1);
-    background-repeat: no-repeat;
-    display: inline-block;
-    /* Allow for inline display */
-    image-rendering: pixelated;
+
+.nav-space{
+    height: 80px;
 }
-
-
 
 /* ナビゲーションバー全体 */
 .navbar {
@@ -62,7 +46,6 @@ body {
 /* Alt212 左上ロゴ */
 .navbar-left .top-nav {
     font-size: 16px;
-    text-transform: uppercase;
     color: #FFFFFF;
     background: none; /* 背景を消す */
     border: none; /* ボーダーを消す */
@@ -95,6 +78,94 @@ body {
 
 
 
+.masthead {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /* 要素が両側に均等なスペースを取るよう */
+    /* justify-content: space-around;  */
+    justify-content: flex-start; /* 左寄せ */
+}
+
+.masthead-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: auto auto;
+    background-position-y: bottom;
+}
+
+.masthead-background {
+    background-image: url("/assets/img/header-background.png");
+    background-repeat: no-repeat;
+    /* 画像が要素全体を覆うようにします */
+    background-size: cover;
+    z-index: 1;
+}
+
+.masthead-content {
+    position: relative;
+    margin-left: 100px;
+    z-index: 2;
+    color: white;
+}
+
+.text-space {
+    height: 100px;
+}
+
+.text-name {
+    margin-top: 50px;
+    font-weight : bold;
+    font-size : 80px;
+    letter-spacing : 1px;
+    margin-bottom: 0;
+    color : #FFFFFF;
+}
+
+.text-job {
+    font-weight : bold;
+    font-size : 40px;
+    letter-spacing : 0.5px;
+    color : #FFFFFF;
+}
+
+/* .text-shadow {
+    text-shadow: 0.03em 0.03em 0.03em #00000050;
+} */
+
+.masthead h1 {
+    font-size: 8rem;
+}
+
+.pixel-icon {
+    image-rendering: pixelated;
+}
+
+.masthead h3 {
+    font-size: 3rem;
+}
+
+/* Reduces the font size of the masthead text on smaller screens */
+
+@media (max-width: 800px) {
+    .masthead h1 {
+        font-size: 4rem;
+    }
+    .masthead h3 {
+        font-size: 2.5rem;
+    }
+    .masthead p {
+        font-size: 2.5rem;
+    }
+}
+
+p {
+    font-size: 1.25rem;
+}
+
 
 .content-section {
     padding-top: 7.5rem;
@@ -117,33 +188,15 @@ h4,
 h5,
 h6 {}
 
-.masthead {
-    background: url('assets/img/header-background.png') no-repeat center center;
-    background-size: cover;
-
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 @keyframes masthead-scroll {
     from {
         background-position-x: 0px;
     }
     to {
-        background-position-x: 2000px;
+        background-position-x: 1920px;
     }
 }
 
-.masthead-content {
-    position: relative;
-    z-index: 5;
-    color: white;
-    text-align: center;
-}
 
 @keyframes vertical-sinus {
     to {
@@ -171,37 +224,6 @@ h6 {}
     animation: vertical-sinus 0.4s alternate infinite ease-in-out;
     transition: opacity 0.2s ease-out;
     opacity: 0;
-}
-
-.text-shadow {
-    text-shadow: 0.03em 0.03em 0.03em #00000050;
-}
-
-.masthead h1 {
-    font-size: 8rem;
-}
-
-.pixel-icon {
-    image-rendering: pixelated;
-}
-
-.masthead h3 {
-    font-size: 3rem;
-}
-
-/* Reduces the font size of the masthead text on smaller screens */
-
-@media (max-width: 800px) {
-    .masthead h1 {
-        font-size: 4rem;
-    }
-    .masthead h3 {
-        font-size: 2.5rem;
-    }
-}
-
-p {
-    font-size: 1.25rem;
 }
 
 .history-item,
