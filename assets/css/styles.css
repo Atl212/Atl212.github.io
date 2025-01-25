@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'pixel';
-    src: url('../fonts/pokemon-emerald.ttf');
+    /* src: url('../fonts/pokemon-emerald.ttf'); */
+    src: url('../fonts/Source-Han-Sans-CN-VF-Regular.otf');
 }
 
 :root {
