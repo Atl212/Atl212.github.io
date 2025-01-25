@@ -6,13 +6,13 @@
         <!-- デバイスdeviceに応じてレスポンシブresponsiveデザインを適用 -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- 検索エンジンengine向けの説明文 -->
-        <meta name="description" content="French software engineer working in the video game industry, passionate about bread, pixel art, and game development.">
+        <meta name="description" content="Just a software development.">
         <!-- 著者情報 -->
         <meta name="author" content="Atl212">
 
         <!-- Open Graph (OG) プロパティproperty：SNSでのシェア時の表示情報 -->
         <meta property="og:title" content="Atl212 - Software Engineer">
-        <meta property="og:description" content="French software engineer working in the video game industry, passionate about bread, pixel art, and game development.">
+        <meta property="og:description" content="Just a software development.">
         <meta property="og:image" content="https://adrien-givry.com/assets/img/social-thumbnail.jpg">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
@@ -23,8 +23,8 @@
         <title>Atl212 - Software Engineer</title>
 
         <!-- ブラウザ(web) browserのタブに表示されるアイコンicon -->
-        <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+        <link rel="shortcut icon" type="image/png" href="assets/img/bonfire-Icon-transparency.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/bonfire-Icon-transparency.png">
 
         <!-- ページのスクリプトscript：deferでHTML解析後に実行 -->
         <script defer src="script.js" data-website-id="d807d228-f189-4dcb-8d1b-0ed7423828d9"></script>
@@ -40,19 +40,29 @@
     </head>
 
     <body>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <button class="top-nav">Alt212</button>
+            </div>
+        
+            <div class="navbar-right">
+                <button class="nav">Project</button>
+                <button class="nav">PAINTING</button>
+                <button class="nav">Clip</button>
+                <button class="nav">CONTACT</button>
+            </div>
+        </nav>
+        
+        
         <!-- ページのヘッダーheaderセクションsection -->
         <header class="masthead d-flex">
-            <!-- 背景や視覚エフェクトeffect -->
-            <div class="masthead-background aos-item" data-aos="fade-up"></div>
-            <div class="masthead-clouds-1 aos-item" data-aos="fade-up" data-aos-delay="0"></div>
-            <div class="masthead-clouds-2 aos-item" data-aos="fade-up" data-aos-delay="200"></div>
-            <div class="masthead-clouds-3 aos-item" data-aos="fade-up" data-aos-delay="400"></div>
-
             <!-- メインmain コンテンツcontents -->
             <div class="container masthead-content">
+                
                 <h1 class="mb-1 aos-item text-shadow" data-aos="zoom-in" data-aos-delay="300">
                     Atl212
                 </h1>
+
                 <h3 class="mb-5 aos-item text-shadow" data-aos="fade-right" data-aos-delay="500">
                     Software Engineer
                 </h3>
@@ -63,7 +73,11 @@
         </header>
 
         <!-- 音楽再生ボタン -->
-        <button id="musicButton" class="btn btn-primary" data-play-icon="fa fa-play" data-pause-icon="fa fa-pause" data-umami-event="Music Button">
+        <button id="musicButton" 
+            class="btn btn-primary" 
+            data-play-icon="fa fa-play" 
+            data-pause-icon="fa fa-pause" 
+            data-umami-event="Music Button">
         </button>
 
         <!-- 音楽再生用オーディオaudio -->
@@ -76,55 +90,9 @@
             <source src="assets/musics/06 Suite no. 6, en sol majeur, pour.m4a" type="audio/mpeg">
         </audio>
 
-        <!-- ビジュアルvisual的なセパレーターseparator -->
-        <div class="separator gradient-sky-2-1"></div>
-
-        <!-- About -->
-        <section class="content-section bg-sky-1" id="about">
-            <div class="container text-center aos-item" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
-                <div class="row">
-                    <div class="col-lg-10 mx-auto">
-
-                        <div class="content-section-heading text-center"> 
-                            <h2 class="mb-5">
-                                <span class="sprite-icon align-middle" style="--x: 9; --y: 13;">
-                                </span> 
-                                &nbsp; Main Experience
-                            </h2>
-                        </div>
-
-                        <ul class="mb-5 list-unstyled">
-                            <li class='history-item aos-item' data-aos='fade-in'>
-                                <span class='badge rounded-pill text-bg-dark history-date'>December 1997</span>
-                                <br> <b>Character created</b> 
-                            </li>
-
-                            <li>
-                                <img src='assets/img/down_arrow.png' class='aos-item' data-aos='fade-in' data-aos-delay='200' width='20' alt=''>
-                            </li>
-
-                            <li class='history-item aos-item' data-aos='fade-in'>
-                                <span class='badge rounded-pill text-bg-dark history-date'>2012 - 2015</span>
-                                <br> <b><u>Main Quest I:</u> Graduated from a french high school</b> 
-                                <br>Physics, chemistry, maths, engineering and programming 
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-                <a class="btn btn-primary js-scroll-trigger aos-item" data-aos="zoom-in" data-aos-delay="300" href="docs/cv.pdf" target="_blank" data-umami-event="CV Button">
-                    Take a Peek at my CV 
-                    <span class='fa fa-file-text-o'></span>
-                </a>
-            </div>
-        </section>
-
-        <div class="separator gradient-sky-1-2"></div>
-        <div class="separator gradient-sky-2-3"></div>
-
 
         <!-- Portfolio -->
-        <section class="content-section bg-sky-3" id="portfolio">
+        <section class="content-section" id="portfolio">
             <div class="container aos-item" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
                 <div class="content-section-heading text-center">
                     <h2 class="mb-5">
@@ -313,11 +281,9 @@
                 </div>
             </div>
         </div>
-        <div class="separator gradient-sky-3-4"></div>
-        <div class="separator gradient-sky-4-5"></div>
 
         <!-- Paintings -->
-        <section class="content-section bg-sky-5" id="Paintings">
+        <section class="content-section" id="Paintings">
             <div class="container text-center aos-init aos-animate" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
                 <div class="content-section-heading text-center">
                     <h2 class="mb-5">
@@ -353,10 +319,7 @@
             </div>
         </section>
 
-        <div class="separator gradient-sky-5-4"></div>
-        <div class="separator gradient-sky-4-3"></div>
-
-        <section class="content-section bg-sky-3" id="contact">
+        <section class="content-section" id="contact">
             <div class="container text-center aos-item" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
                 <div class="content-section-heading text-center">
                     <h2 class="mb-5">
@@ -415,11 +378,8 @@
             </div>
         </div>
         
-        <div class="separator gradient-sky-3-2"></div>
-        <div class="separator gradient-sky-2-1"></div>
-
         <!-- Contact -->
-        <section class="content-section bg-sky-1" id="contact">
+        <section class="content-section" id="contact">
             <div class="container text-center aos-item" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
                 <div class="row">
                     <div class="col-lg-10 mx-auto">
@@ -442,11 +402,7 @@
             </div>
         </section>
 
-        <div class="separator bg-sky-1"></div>
-        <div class="separator bg-sky-1"></div>
-
         <footer class="text-center">
-            <span class="footer-animation"></span>
             <div class="container">
                 <ul class="list-inline mb-3">
                     <li class="list-inline-item aos-item" data-aos="flip-left" data-aos-offset="100" data-aos-duration="1000" data-aos-delay="250" data-aos-once="true">
@@ -470,6 +426,7 @@
                 <p class="text-white mb-0"> Web UI/UX Design : @imat_
             </div>
         </footer>
+
         <script src="assets/dist/jquery/jquery-3.7.1.min.js"></script>
         <script src="assets/dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
         <script src="assets/dist/viewerjs-1.11.7/dist/viewer.js"></script>
