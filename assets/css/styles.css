@@ -212,6 +212,25 @@ p {
     font-weight: 400;
 }
 
+
+
+.painting-item {
+    max-width: 1200px;
+    margin: auto auto 1rem;
+    cursor: pointer;
+}
+
+.painting-item .painting-image {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: sepia(20%) brightness(0.8);
+}
+
+.painting-item:hover .painting-image {
+    transform: scale(1.05);
+    filter: sepia(0%) brightness(1);
+}
+
+
 .portfolio-item {
     max-width: 530px;
     margin: auto auto 1rem;

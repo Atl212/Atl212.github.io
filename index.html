@@ -33,8 +33,18 @@
         <link href="assets/dist/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="assets/dist/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="assets/dist/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+        <link href="assets/dist/viewerjs-1.11.7/dist/viewer.css"  rel="stylesheet">
         <link href="assets/dist/aos/css/aos.css" rel="stylesheet">
         <link href="assets/css/styles.css" rel="stylesheet">
+
+        <script src="assets/dist/jquery/jquery-3.7.1.min.js"></script>
+        <script src="assets/dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+        <script src="assets/dist/viewerjs-1.11.7/dist/viewer.js"></script>
+        <script src="assets/dist/aos/js/aos.js"></script>
+        <script src="assets/js/aos.js"></script>
+        <script src="assets/js/audio.js"></script>
+        <script src="assets/js/scroll-indicator.js"></script>
+        <script src="assets/js/image-gallery.js"></script>
     </head>
 
     <body>
@@ -127,13 +137,14 @@
                 <div class="content-section-heading text-center">
                     <h2 class="mb-5">
 
-                        <span class="sprite-icon align-middle" style="--x: 19; --y: 3;"></span> &nbsp;Programming Project
+                        <span class="sprite-icon align-middle" style="--x: 19; --y: 3;"></span> &nbsp;Programming Projects
                     </h2>
                 </div>
-
+                
                 <div class="row no-gutters">
+                    <!-- The Abyss -->
                     <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                        <a data-bs-toggle="modal" data-bs-target="#modalTheAbyss">
+                        <a data-bs-toggle="modal" data-bs-target="#modalThe_Abyss">
                             <span class="caption">
                             </span>
 
@@ -142,19 +153,36 @@
                             alt="The Abyss" width="600" height="338">
                         </a>
                     </div>
-                    
+
+                    <!-- The Nightmare of Spring -->
                     <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                        <a data-bs-toggle="modal" data-bs-target="#modalLegoStarWars:Castaway">
+                        <a data-bs-toggle="modal" data-bs-target="#modalThe_Nightmare_of_Spring">
                             <span class="caption">
                                 <span class="caption-content">
-                                    <h2>Lego Star Wars: Castaway</h2>
-                                    <p class="mb-0">Apple Arcade Exclusive Lego Star Wars Game</p>
+                                    <h2>The Nightmare of Spring</h2>
+                                    <p class="mb-0">Just a recurrence of a personal Nightmare.</p>
                                 </span>
                             </span>
 
                             <img class="img-fluid portfolio-image" 
-                            src="assets/img/portfolio/star_wars_castaway.jpg" 
-                            alt="Lego Star Wars: Castaway" width="600" height="338">
+                            src="assets/img/portfolio/TheNightmareofSpring.png" 
+                            alt="The Nightmare of Spring" width="600" height="338">
+                        </a>
+                    </div>
+
+                    <!-- That Abyss -->
+                    <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
+                        <a data-bs-toggle="modal" data-bs-target="#modalThat_Abyss">
+                            <span class="caption">
+                                <span class="caption-content">
+                                    <h2>That Abyss</h2>
+                                    <p class="mb-0">An AI-related Game Jam Demo..</p>
+                                </span>
+                            </span>
+
+                            <img class="img-fluid portfolio-image" 
+                            src="assets/img/portfolio/That_Abyss.png" 
+                            alt="That Abyss" width="600" height="338">
                         </a>
                     </div>
                 </div>
@@ -162,11 +190,13 @@
         </section>
 
         <!-- Portfolio Modals -->
-        <div class="modal fade" id="modalTheAbyss" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <!-- The Abyss -->
+        <div class="modal fade" id="modalThe_Abyss" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2 class="modal-title" id="exampleModalLongTitle">The Abyss&nbsp;</h2>
+                        <h2 class="modal-title" id="exampleModalLongTitle">The Abyss &nbsp;</h2>
+
                         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -183,12 +213,12 @@
 
                     <div class="modal-footer">
                         <a class="btn btn-primary" 
-                            href="https://prf.hn/click/camref:1100l3L8uv/destination:https://assetstore.unity.com/packages/templates/systems/2d-action-rpg-engine-mythril2d-249375" 
+                            href="https://adelinetorres.fanbox.cc/posts/9077547" 
                             target="_blank" data-umami-event="Project Action Button" 
                             data-umami-event-action-type="Website"
                             data-umami-event-project="TheAbyss">
-                            Website&nbsp;
-                            <i class="fa fa-globe"></i>
+                            Article&nbsp;
+                            <i class="fa fa-file-text-o"></i>
                         </a>
 
                         <a class="btn btn-primary" href="https://www.youtube.com/watch?v=SxWc_csyor4" 
@@ -201,20 +231,27 @@
             </div>
         </div>
 
-        <div class="modal fade" id="modalLegoStarWars:Castaway" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <!-- The Nightmare of Spring -->
+        <div class="modal fade" id="modalThe_Nightmare_of_Spring" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2 class="modal-title" id="exampleModalLongTitle">Lego Star Wars: Castaway</h2>
+                        <h2 class="modal-title" id="exampleModalLongTitle">The Nightmare of Spring &nbsp;</h2>
+
                         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
 
                     <div class="modal-body">
                         <p>Worked as an engine programmer on Gameloft&#039;s proprietary game engine behind Lego Star Wars: Castaway. 
                             Supported the game development team by debugging, optimizing, and implementing tools for the needs of the production, 
-                            including the development of a shader editor to give technical artists the ability to create visual effects without coding.</p>
+                            including the development of a shader editor to give technical artists the ability to create visual effects without coding.
+                        </p>
+
+                        <ul>
+                            <li>Team size: 3</li>
+                        </ul>
                     </div>
 
                     <div class="modal-footer">
@@ -237,11 +274,58 @@
             </div>
         </div>
 
+        <!-- That Abyss -->
+        <div class="modal fade" id="modalThat_Abyss" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModalLongTitle">That Abyss &nbsp;</h2>
+
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>Worked as an engine programmer on Gameloft&#039;s proprietary game engine behind Lego Star Wars: Castaway. 
+                            Supported the game development team by debugging, optimizing, and implementing tools for the needs of the production, 
+                            including the development of a shader editor to give technical artists the ability to create visual effects without coding.
+                        </p>
+
+                        <ul>
+                            <li>Team size: 4</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a class="btn btn-primary" 
+                        href="https://www.starwars.com/games-apps/lego-star-wars-castaways" 
+                        target="_blank" data-umami-event="Project Action Button" 
+                        data-umami-event-action-type="Website" 
+                        data-umami-event-project="Lego Star Wars: Castaway">
+
+                            Website&nbsp;<i class="fa fa-globe"></i>
+                        </a>
+
+                        <a class="btn btn-primary" 
+                            href="https://www.youtube.com/watch?v=q22m9zc6ZgQ" 
+                            target="_blank" data-umami-event="Project Action Button" 
+                            data-umami-event-action-type="Demo" data-umami-event-project="Lego Star Wars: Castaway">
+                            Demo&nbsp;
+                            <i class="icon-social-youtube"></i>
+                        </a>
+                        <a class="btn btn-secondary" href="https://apps.apple.com/app/lego-star-wars-castaways/id1474344996?ign-itscg=30800&amp;ign-itsct=legostarwarscastaways" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Download" data-umami-event-project="Lego Star Wars: Castaway">
+                            Download&nbsp;<i class="fa fa-mobile"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="separator gradient-sky-3-4"></div>
         <div class="separator gradient-sky-4-5"></div>
 
         <!-- Paintings -->
-        <section class="content-section bg-sky-5" id="strengths">
+        <section class="content-section bg-sky-5" id="Paintings">
             <div class="container text-center aos-init aos-animate" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
                 <div class="content-section-heading text-center">
                     <h2 class="mb-5">
@@ -250,28 +334,89 @@
                     </h2>
                 </div>
 
+                <!-- Institute of Oceanography -->
                 <table class="table strength-table">
                     <tbody>
-                        <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
-                            <a data-bs-toggle="modal" data-bs-target="#modalTheAbyss">
-                                <span class="caption">
-                                </span>
-    
-                                <img class="img-fluid portfolio-image" 
-                                src="assets/img/portfolio/The_Abyss.png" 
-                                alt="The Abyss" width="1200" height="650">
+                        <div id="image-gallery" class="col-lg-6 painting-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
+                            <a data-bs-toggle="modal" data-bs-target="#modalInstitute_of_Oceanography">
+                                <img class="img-fluid painting-image" 
+                                data-original="assets/img/Paintings/海洋研究所.png"
+                                src="assets/img/Paintings/海洋研究所.png" 
+                                alt="Institute of Oceanography" width="1200">
                             </a>
                         </div>
                     </tbody>
                 </table>
             </div>
         </section>
-        
+
         <div class="separator gradient-sky-5-4"></div>
         <div class="separator gradient-sky-4-3"></div>
 
-        <!-- Contact -->
         <section class="content-section bg-sky-3" id="contact">
+            <div class="container text-center aos-item" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
+                <div class="content-section-heading text-center">
+                    <h2 class="mb-5">
+                        <span class="sprite-icon align-middle" style="--x: 19; --y: 3;"></span> 
+                        
+                        &nbsp;Anime Clips
+                    </h2>
+                </div>
+
+                <div class="row no-gutters">
+                    <!-- The Abyss -->
+                    <div class="col-lg-6 portfolio-item aos-item" data-aos="zoom-in" data-aos-duration="500" data-aos-once="true">
+                        <a data-bs-toggle="modal" data-bs-target="#modalRUSH_GIRL">
+                            <span class="caption">
+                            </span>
+
+                            <img class="img-fluid portfolio-image" 
+                            src="assets/img/Animation/RUSH_GIRL.png" 
+                            alt="RUSH GIRL" width="600" height="338">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal fade" id="modalRUSH_GIRL" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModalLongTitle">Rush Girl &nbsp;</h2>
+
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>An anime clip based on Neon Genesis Evangelion.
+                        </p>
+                        <ul>
+                            <li>Team size: 3</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-footer">
+                        <a class="btn btn-primary" href="https://www.youtube.com/watch?v=SxWc_csyor4" 
+                            target="_blank" data-umami-event="Project Action Button" 
+                            data-umami-event-action-type="Trailer" data-umami-event-project="TheAbyss">
+
+                            Video&nbsp;
+                            
+                            <i class="icon-social-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="separator gradient-sky-3-2"></div>
+        <div class="separator gradient-sky-2-1"></div>
+
+        <!-- Contact -->
+        <section class="content-section bg-sky-1" id="contact">
             <div class="container text-center aos-item" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
                 <div class="row">
                     <div class="col-lg-10 mx-auto">
@@ -281,7 +426,6 @@
                             </h2>
                         </div>
                         <div class="aos-item" data-aos="fade-up" data-aos-duration="500" data-aos-offset="100">
-                            <p>Let's make some <u><b>EPIC</b></u> games together (no pun intended).</p>
                             <p>Skyrim is the best "Elder Scrolls" game - change my mind.</p>
                             <a class="btn btn-primary js-scroll-trigger" href="mailto:contact@adrien-givry.com" data-umami-event="Email Button">
                                 Take Your Game to the 
@@ -295,13 +439,13 @@
             </div>
         </section>
 
-        <div class="separator bg-sky-3"></div>
-        <div class="separator bg-sky-3"></div>
+        <div class="separator bg-sky-1"></div>
+        <div class="separator bg-sky-1"></div>
 
         <footer class="text-center">
             <span class="footer-animation"></span>
             <div class="container">
-                <ul class="list-inline mb-5">
+                <ul class="list-inline mb-3">
                     <li class="list-inline-item aos-item" data-aos="flip-left" data-aos-offset="100" data-aos-duration="1000" data-aos-delay="250" data-aos-once="true">
                         <a class="social-link rounded-circle text-white" href="https://github.com/Atl212" target="_blank" data-umami-event="GitHub Button">
                             <i class="icon-social-github"></i>
@@ -320,16 +464,8 @@
                         </a>
                     </li>
                 </ul>
-                <p class="text-black mb-0">Wow, you read all the way to here?</p>
-                <p class="text-black mb-0">I hope you at least clicked a few buttons.</p>
+                <p class="text-white mb-0"> Web UI/UX Design : @imat_
             </div>
         </footer>
-        <script src="assets/dist/jquery/jquery-3.7.1.min.js"></script>
-        <script src="assets/dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/dist/aos/js/aos.js"></script>
-        <script src="assets/js/aos.js"></script>
-
-        <script src="assets/js/audio.js"></script>
-        <script src="assets/js/scroll-indicator.js"></script>
     </body>
 </html>
