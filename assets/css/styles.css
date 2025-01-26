@@ -23,6 +23,18 @@ body {
 }
 
 
+
+
+#musicButton {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: auto;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+
 .nav-space{
     height: 80px;
 }
@@ -45,6 +57,7 @@ body {
 
 /* Alt212 左上ロゴ */
 .navbar-left .top-nav {
+    font-weight : bold;
     font-size: 16px;
     color: #FFFFFF;
     background: none; /* 背景を消す */
@@ -86,7 +99,6 @@ body {
     align-items: center;
     /* 要素が両側に均等なスペースを取るよう */
     /* justify-content: space-around;  */
-    justify-content: flex-start; /* 左寄せ */
 }
 
 .masthead-background {
@@ -107,9 +119,10 @@ body {
 
 .masthead-content {
     position: relative;
-    margin-left: 100px;
+    margin-left: 150px;
     z-index: 2;
     color: white;
+    justify-content: flex-start; /* 左寄せ */
 }
 
 .text-space {
@@ -188,42 +201,42 @@ h4,
 h5,
 h6 {}
 
-@keyframes masthead-scroll {
-    from {
-        background-position-x: 0px;
-    }
-    to {
-        background-position-x: 1920px;
-    }
-}
-
-
 @keyframes vertical-sinus {
     to {
-        transform: translateY(-12px);
+        /* transform: translateY(-12px); */
+        /* CSS で transform を使用する際、複数のスタイルが同時に指定されると上書きされます。
+        そのため、@keyframes アニメーション内で transform を変更すると、初期設定で中央に配置するための transform: 
+        translateX(-50%); が無効化され、要素が右上に移動する挙動が発生している可能性があります。 */
+        transform: translateX(-50%) translateY(-12px);
     }
 }
 
 #scroll-indicator {
-    --arrow-size: 64px;
+    --arrow-size: 28px;
     --text-offset: 12px;
     position: fixed;
     bottom: 24px;
-    right: auto;
-    left: auto;
+
     background-image: url('../img/down_arrow.png');
     background-repeat: no-repeat;
     background-size: var(--arrow-size) var(--arrow-size);
+
     text-align: center;
     background-position-x: center;
     background-position-y: var(--text-offset);
+
     image-rendering: pixelated;
     width: calc(var(--arrow-size) * 2);
     height: calc(var(--arrow-size) + var(--text-offset));
     z-index: 1000;
+
     animation: vertical-sinus 0.4s alternate infinite ease-in-out;
     transition: opacity 0.2s ease-out;
     opacity: 0;
+
+        /* 中央に配置するための設定 */
+        left: 50%; /* 親要素の幅の50% */
+        transform: translateX(-50%); /* 要素自身の幅の半分だけ左に移動 */
 }
 
 .history-item,
@@ -310,13 +323,29 @@ h6 {}
     filter: sepia(0%) brightness(1);
 }
 
-@keyframes footer-scroll {
-    from {
-        background-position-x: 0px;
-    }
-    to {
-        background-position-x: 192px;
-    }
+
+
+
+.footer .container{
+    /* 手軽に並列レイアウトができるスタイル */
+    display:flex;
+    align-items: center; /* 垂直方向を中央揃え */
+}
+
+.footer .container .left {
+    flex: 1; /* 左側の文が左寄りになる */
+    text-align: left; /* 左揃え */
+}
+
+.footer .container .left .text {
+    color: #ffffff;
+}
+
+.footer .container .right {
+    display:flex;
+    flex: 0; /* 必要以上に広がらない */
+    text-align: right; /* 左揃え */
+    margin-left: 10px; /* アイコン同士の間隔を追加 */
 }
 
 .social-link {
@@ -327,39 +356,30 @@ h6 {}
     font-size: 1.5rem;
     transition: background-color 0.15s ease-in-out;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .social-link:hover {
-    background-color: rgb(128, 128, 128);
-    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+
+    /* background-color: rgb(128, 128, 128);
+    text-decoration: none; */
 }
 
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-    10% {
-        transform: translateY(4px);
-    }
-    25% {
-        transform: translateY(6px);
-    }
-    40% {
-        transform: translateY(0);
-    }
-    60% {
-        transform: translateY(-3px);
-    }
-    75% {
-        transform: translateY(-5px);
-    }
-    90% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(0);
-    }
+.footer .container .right .social-link .icon{
+    transform: scale(0.75);
+    align-items:last baseline; /* 垂直方向を中央揃え */
 }
+
+.footer .container .right .social-link .icon:hover{
+    transition: opacity 0.2s ease-out;
+}
+
+
+
+
+
+
 
 a {
     color: #1D809F;
@@ -370,6 +390,9 @@ a:focus,
 a:active {
     color: #155d74;
 }
+
+
+
 
 .btn {
     border: none !important;
@@ -416,13 +439,4 @@ a:active {
 
 .text-secondary {
     color: #ecb807 !important;
-}
-
-#musicButton {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: auto;
-    font-size: 18px;
-    z-index: 1000;
 }

@@ -1,5 +1,5 @@
 const scrollIndicator = document.getElementById('scroll-indicator');
-const delayBeforeShowingIndicator = 1500;
+const delayBeforeShowingIndicator = 750;
 
 var scrollIndicatorEnabled = false;
 
