@@ -46,21 +46,21 @@
     <body>
         <nav class="navbar">
             <div class="navbar-left">
-                <button class="top-nav">TOP</button>
+                <button id="scroll-top-btn" class="top-nav">TOP</button>
             </div>
         
             <div class="navbar-right">
-                <button class="nav">Project</button>
-                <button class="nav">PAINTING</button>
-                <button class="nav">Clip</button>
-                <button class="nav">CONTACT</button>
+                <button id="scroll-project-btn" class="nav">Project</button>
+                <button id="scroll-painting-btn" class="nav">PAINTING</button>
+                <button id="scroll-clip-btn" class="nav">Clip</button>
+                <button id="scroll-contact-btn" class="nav">CONTACT</button>
             </div>
         </nav>
         
         <!-- <div class="nav-space"></div> -->
         
         <!-- ページのヘッダーheaderセクションsection -->
-        <header class="masthead d-flex">
+        <header id="top-section" id="top-section"r class="masthead d-flex">
             <div class="masthead-background aos-item"></div>
 
             <!-- メインmain コンテンツcontents -->
@@ -172,11 +172,12 @@
                     </div>
 
                     <div class="modal-body">
-                        <p>Unleash your creativity with Mythril2D! Create breathtaking 2D Action RPG games without any coding. 
-                            From epic quests to thrilling battles, bring your games to life in no time.
+                        <p>
+                            A 2D adventure game that references "fight-scavenge-evacuate" and references game concepts such as "Dark Soul" and "Escape from Tarkov".
                         </p>
+
                         <ul>
-                            <li>Team size: 1</li>
+                            <li>Team size: 4</li>
                         </ul>
                     </div>
 
@@ -185,15 +186,28 @@
                             href="https://adelinetorres.fanbox.cc/posts/9077547" 
                             target="_blank" data-umami-event="Project Action Button" 
                             data-umami-event-action-type="Website"
-                            data-umami-event-project="TheAbyss">
+                            data-umami-event-project="The Abyss">
                             Article&nbsp;
+
                             <i class="fa fa-file-text-o"></i>
                         </a>
 
                         <a class="btn btn-primary" href="https://www.youtube.com/watch?v=SxWc_csyor4" 
                             target="_blank" data-umami-event="Project Action Button" 
-                            data-umami-event-action-type="Trailer" data-umami-event-project="TheAbyss">
-                            Trailer&nbsp;<i class="icon-social-youtube"></i>
+                            data-umami-event-action-type="Video" 
+                            data-umami-event-project="The Abyss">
+                            Video&nbsp;
+                            
+                            <i class="icon-social-youtube"></i>
+                        </a>
+
+                        <a class="btn btn-secondary" href="https://drive.google.com/file/d/1OsQ0hnlIpbFTCDiEbvFcMzya3s7rPn5n/view" 
+                            target="_blank" 
+                            data-umami-event="Project Action Button" 
+                            data-umami-event-action-type="Download" 
+                            data-umami-event-project="The Abyss">
+                            Download&nbsp;
+                            <i class="fa fa-download"></i>
                         </a>
                     </div>
                 </div>
@@ -213,30 +227,28 @@
                     </div>
 
                     <div class="modal-body">
-                        <p>Worked as an engine programmer on Gameloft&#039;s proprietary game engine behind Lego Star Wars: Castaway. 
-                            Supported the game development team by debugging, optimizing, and implementing tools for the needs of the production, 
-                            including the development of a shader editor to give technical artists the ability to create visual effects without coding.
+                        <p>
+                            A small game made using RPGmaker MV, inspired by one of my dreams.
                         </p>
-
-                        <ul>
-                            <li>Team size: 3</li>
-                        </ul>
                     </div>
 
                     <div class="modal-footer">
-                        <a class="btn btn-primary" href="https://www.starwars.com/games-apps/lego-star-wars-castaways" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Website" data-umami-event-project="Lego Star Wars: Castaway">
-                            Website&nbsp;<i class="fa fa-globe"></i>
-                        </a>
-
-                        <a class="btn btn-primary" 
-                            href="https://www.youtube.com/watch?v=q22m9zc6ZgQ" 
+                        <a class="btn btn-primary" href="https://www.bilibili.com/video/BV1M3411n7eC" 
                             target="_blank" data-umami-event="Project Action Button" 
-                            data-umami-event-action-type="Demo" data-umami-event-project="Lego Star Wars: Castaway">
-                            Demo&nbsp;
+                            data-umami-event-action-type="Video" 
+                            data-umami-event-project="The Nightmare of Spring">
+                            Video&nbsp;
+                            
                             <i class="icon-social-youtube"></i>
                         </a>
-                        <a class="btn btn-secondary" href="https://apps.apple.com/app/lego-star-wars-castaways/id1474344996?ign-itscg=30800&amp;ign-itsct=legostarwarscastaways" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Download" data-umami-event-project="Lego Star Wars: Castaway">
-                            Download&nbsp;<i class="fa fa-mobile"></i>
+
+                        <a class="btn btn-secondary" href="https://drive.google.com/file/d/1Rd7wp1Pqf2cxuNhxLu8BNeURpIM1PmbX/view" 
+                        target="_blank" 
+                        data-umami-event="Project Action Button" 
+                        data-umami-event-action-type="Download" 
+                        data-umami-event-project="The Nightmare of Spring">
+                            Download&nbsp;
+                            <i class="fa fa-download"></i>
                         </a>
                     </div>
                 </div>
@@ -256,9 +268,9 @@
                     </div>
 
                     <div class="modal-body">
-                        <p>Worked as an engine programmer on Gameloft&#039;s proprietary game engine behind Lego Star Wars: Castaway. 
-                            Supported the game development team by debugging, optimizing, and implementing tools for the needs of the production, 
-                            including the development of a shader editor to give technical artists the ability to create visual effects without coding.
+                        <p>
+                            I participated in a Game Jam with a small team of college classmates. 
+                            The theme was related to AI, so we used some image generation technology to develop a small text adventure game.
                         </p>
 
                         <ul>
@@ -268,23 +280,22 @@
 
                     <div class="modal-footer">
                         <a class="btn btn-primary" 
-                        href="https://www.starwars.com/games-apps/lego-star-wars-castaways" 
-                        target="_blank" data-umami-event="Project Action Button" 
-                        data-umami-event-action-type="Website" 
-                        data-umami-event-project="Lego Star Wars: Castaway">
-
-                            Website&nbsp;<i class="fa fa-globe"></i>
-                        </a>
-
-                        <a class="btn btn-primary" 
-                            href="https://www.youtube.com/watch?v=q22m9zc6ZgQ" 
+                            href="https://www.gmhub.com/game/2025" 
                             target="_blank" data-umami-event="Project Action Button" 
-                            data-umami-event-action-type="Demo" data-umami-event-project="Lego Star Wars: Castaway">
-                            Demo&nbsp;
-                            <i class="icon-social-youtube"></i>
+                            data-umami-event-action-type="Website"
+                            data-umami-event-project="That Abyss">
+                            Article&nbsp;
+
+                            <i class="fa fa-file-text-o"></i>
                         </a>
-                        <a class="btn btn-secondary" href="https://apps.apple.com/app/lego-star-wars-castaways/id1474344996?ign-itscg=30800&amp;ign-itsct=legostarwarscastaways" target="_blank" data-umami-event="Project Action Button" data-umami-event-action-type="Download" data-umami-event-project="Lego Star Wars: Castaway">
-                            Download&nbsp;<i class="fa fa-mobile"></i>
+
+                        <a class="btn btn-secondary" href="https://drive.google.com/file/d/1RP4t1NijJGpMotlaW1QRd9ZEQz-2V3Sd/view" 
+                        target="_blank" 
+                        data-umami-event="Project Action Button" 
+                        data-umami-event-action-type="Download" 
+                        data-umami-event-project="That Abyss">
+                            Download&nbsp;
+                            <i class="fa fa-download"></i>
                         </a>
                     </div>
                 </div>
@@ -292,7 +303,7 @@
         </div>
 
         <!-- Paintings -->
-        <section class="content-section" id="Paintings">
+        <section class="content-section" id="painting">
             <div class="container text-left aos-init aos-animate" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
                 <div class="content-section-heading text-left">
                     <h2 class="mb-5 text-white">
@@ -327,7 +338,7 @@
             </div>
         </section>
 
-        <section class="content-section" id="contact">
+        <section class="content-section" id="clip">
             <div class="container text-left aos-item" data-aos="fade-up" data-aos-offset="100" data-aos-once="true">
                 <div class="content-section-heading text-left">
                     <h2 class="mb-5 text-white">
@@ -371,12 +382,12 @@
                     </div>
 
                     <div class="modal-footer">
-                        <a class="btn btn-primary" href="https://www.youtube.com/watch?v=SxWc_csyor4" 
+                        <a class="btn btn-primary" href="https://m.acfun.cn/v/?ac=17357698" 
                             target="_blank" data-umami-event="Project Action Button" 
-                            data-umami-event-action-type="Trailer" data-umami-event-project="TheAbyss">
+                            data-umami-event-action-type="Trailer" 
+                            data-umami-event-project="Rush Girl">
 
                             Video&nbsp;
-                            
                             <i class="icon-social-youtube"></i>
                         </a>
                     </div>
@@ -391,15 +402,20 @@
                     <div class="col-lg-10 mx-auto">
                         <div class="content-section-heading text-left">
                             <h2 class="mb-5 text-white">
-                                &nbsp;Contact
+                                Contact
                             </h2>
                         </div>
                         <div class="aos-item" data-aos="fade-left" data-aos-duration="200" data-aos-offset="100">
-                            <p>Skyrim is the best "Elder Scrolls" game - change my mind.</p>
-                            <a class="btn btn-primary js-scroll-trigger" href="mailto:contact@adrien-givry.com" data-umami-event="Email Button">
-                                Take Your Game to the 
-                                <u>NEXT LEVEL</u> 
-                                <span class="fa fa-envelope-o">
+                            <p class="text">
+                                "Bloodborne" is a game that I will never forget for the first time I saw it.
+                            </p>
+                            <p class="text">
+                                If you have any thoughts after reading my resume, please feel free to contact me.
+                            </p>
+
+                            <a class="btn btn-light js-scroll-trigger" href="mailto:contact@adrien-givry.com" data-umami-event="Email Button">
+                                <span class="fa fa-envelope">
+                                    &nbsp; Send
                                 </span>
                             </a>
                         </div>
@@ -440,6 +456,7 @@
         <script src="assets/js/audio.js"></script>
         <script src="assets/js/scroll-indicator.js"></script>
         <script src="assets/js/image-gallery.js"></script>
+        <script src="assets/js/scroll-to-location.js"></script>
 
         <script defer src="https://cloud.umami.is/script.js" data-website-id="bb51f396-70d1-4ac7-9cec-dc1f03856801"></script>
     </body>

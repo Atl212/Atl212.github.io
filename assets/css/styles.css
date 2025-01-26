@@ -325,6 +325,10 @@ h6 {}
 
 
 
+.container .text{
+    color: #FFFFFF;
+}
+
 
 .footer .container{
     /* 手軽に並列レイアウトができるスタイル */
@@ -367,21 +371,19 @@ h6 {}
 }
 
 .footer .container .right .social-link .icon{
-    transform: scale(0.75);
+    transform: scale(0.5);
     align-items:last baseline; /* 垂直方向を中央揃え */
 }
 
 .footer .container .right .social-link .icon:hover{
-    transition: opacity 0.2s ease-out;
+    transition: filter 0.3s ease;
+    filter: brightness(0.75);
 }
 
 
 
 
-
-
-
-a {
+/* a {
     color: #1D809F;
 }
 
@@ -389,7 +391,7 @@ a:hover,
 a:focus,
 a:active {
     color: #155d74;
-}
+} */
 
 
 
