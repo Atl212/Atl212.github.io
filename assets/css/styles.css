@@ -264,19 +264,39 @@ h6 {}
 
 
 .portfolio-item {
-    max-width: 530px;
-    margin: auto auto 1rem;
+    position: relative;
+    width: 600px; /* 设置容器宽度 */
+    height: 338px; /* 设置容器高度 */
+    border: rgb(51, 51, 51, 1) 1px solid;
+    margin: auto auto 2rem;
     cursor: pointer;
+    overflow: hidden; /* 确保图片和遮蔽层不会超出容器 */
+
+    display: flex; /* 启用 Flexbox 布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+
+.portfolio-item .image-container { /* 新增样式 */
+    width: 600px; /* 设置容器宽度 */
+    height: 338px; /* 设置容器高度 */
+    overflow: hidden; /* 裁剪超出容器的内容 */
 }
 
 .portfolio-item .caption {
-    display: flex;
-    height: 100%;
-    width: 100%;
     position: absolute;
     top: 0;
-    bottom: 0;
-    z-index: 1;
+    left: 0;
+    width: 100%; /* 与 .portfolio-item 宽度一致 */
+    height: 100%; /* 与 .portfolio-item 高度一致 */
+    z-index: 3; /* 确保文字在遮蔽层之上 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0; /* 初始状态下不可见 */
+    transition: opacity 0.3s ease;
+    background: rgba(0, 0, 0, 0.2); /* 可选：添加背景色以便更好地看到效果 */
 }
 
 .portfolio-item .caption .caption-content {
@@ -300,11 +320,47 @@ h6 {}
 }
 
 .portfolio-item:hover .portfolio-image {
-    transform: scale(1.05);
-    filter: sepia(0%) brightness(1);
+    transform: scale(1.05); /* 放大图片 */
+    filter: sepia(0%) brightness(1) blur(5px); /* 添加模糊效果 */
 }
 
+.portfolio-item .image-container ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* 半透明黑色背景 */
+    opacity: 0; /* 初始状态下不可见 */
+    transition: opacity 0.3s ease;
+    z-index: 2; /* 确保遮蔽层在图片之上 */
+}
 
+.portfolio-item .image-container :hover::before {
+    opacity: 1; /* 鼠标悬停时显示遮蔽层 */
+    backdrop-filter: blur(5px); /* 仅对背景模糊 */
+}
+
+.portfolio-item .caption {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 3; /* 确保文字在遮蔽层之上 */
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0; /* 初始状态下不可见 */
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .caption {
+    opacity: 1; /* 鼠标悬停时显示文字 */
+}
 
 
 
@@ -324,6 +380,12 @@ h6 {}
     filter: sepia(0%) brightness(1);
 }
 
+
+
+
+.clip-item {
+    border: rgb(255, 255, 255, 1) 1px solid;
+}
 
 
 
