@@ -1,29 +1,29 @@
 const scrollIndicator = document.getElementById('scroll-indicator');
+const iconContents = document.querySelectorAll('.icon-content'); // すべての .icon-content を取得
 const delayBeforeShowingIndicator = 750;
 
-var scrollIndicatorEnabled = false;
+let scrollIndicatorEnabled = false;
 
-updateArrowState = function() {
+function updateIndicatorState() {
     if (!scrollIndicatorEnabled) {
         return;
     }
 
     if (window.scrollY === 0) {
+        // スクロールされていないときに表示
         scrollIndicator.style.opacity = 1;
-    }
-    else {
+        iconContents.forEach(icon => icon.style.opacity = 1);
+    } else {
+        // スクロール後に非表示
         scrollIndicator.style.opacity = 0;
-        
-        // Disable the arrow indicator once the user has scrolled at least once.
-        scrollIndicatorEnabled = false; 
+        iconContents.forEach(icon => icon.style.opacity = 0);
+        scrollIndicatorEnabled = false; // 一度消えたら再表示しない
     }
 }
 
 setTimeout(function() {
     scrollIndicatorEnabled = true;
-    updateArrowState();
+    updateIndicatorState();
 }, delayBeforeShowingIndicator);
 
-window.addEventListener('scroll', function() {
-    updateArrowState();
-});
+window.addEventListener('scroll', updateIndicatorState);

@@ -4,15 +4,6 @@
 }
 
 :root {
-    --sky-pixels-per-unit: 32px;
-    --sky-color-1: #D9EDF7;
-    --sky-color-2: #BDE4F9;
-    --sky-color-3: #B0DEF9;
-    --sky-color-4: #9CD7F9;
-    --sky-color-5: #88D0F9;
-    --sky-color-6: #79C9F9;
-    --grass-color: #7FAD71;
-
     --hole-color-1: #000000;
 }
 
@@ -64,7 +55,7 @@ body {
     cursor: pointer; /* クリックできるマウスカーソル */
 }
 .navbar-left .top-nav:hover {
-    color: rgba(255, 255, 255, 0.7); /* ホバー時に少し透明に */
+    color: rgba(255, 255, 255, 0.5); /* ホバー時に少し透明に */
 }
 
 .navbar-right{
@@ -193,13 +184,6 @@ p {
     text-transform: uppercase;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {}
-
 @keyframes vertical-sinus {
     to {
         /* transform: translateY(-12px); */
@@ -210,11 +194,43 @@ h6 {}
     }
 }
 
+.scroll-content{
+    width: 100vw; /* 画面の幅いっぱいにする */
+    position: fixed;
+    bottom: 24px;
+    margin-left: 150px;
+
+    z-index: 1000;
+}
+
+.scroll-content .icon-content{
+    width: 100vw; /* 画面の幅いっぱいにする */
+
+    display: flex;
+    gap: 20px;
+
+    transition: opacity 0.2s ease-out;
+}
+
+.scroll-content .icon-content .top-social-link{
+}
+
+.scroll-content .icon-content .top-social-link .icon{
+    display: flex;
+    width: 48px;
+    height: 48px;
+    transform: scale(0.5);
+}
+
+.scroll-content .icon-content .top-social-link .icon:hover{
+    transition: filter 0.3s ease;
+    filter: brightness(0.5);
+}
+
 #scroll-indicator {
     --arrow-size: 6px;
     --text-offset: 12px;
     position: fixed;
-    bottom: 24px;
 
     background-image: url('../img/down-arrow-166376.png');
     background-repeat: no-repeat;
@@ -227,11 +243,9 @@ h6 {}
     image-rendering: pixelated;
     height: calc(var(--arrow-size) + var(--text-offset));
     width: calc(var(--arrow-size) * 2);
-    z-index: 1000;
 
     animation: vertical-sinus 0.4s alternate infinite ease-in-out;
     transition: opacity 0.2s ease-out;
-    opacity: 0;
 
     /* 中央に配置するための設定 */
     left: 50%; /* 親要素の幅の50% */
@@ -445,7 +459,7 @@ h6 {}
 
 .footer .container .right .social-link .icon:hover{
     transition: filter 0.3s ease;
-    filter: brightness(0.75);
+    filter: brightness(0.5);
 }
 
 
@@ -465,6 +479,16 @@ h6 {}
 .btn-primary:hover,
 .btn-primary:active {
     color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.btn-light {
+    background-color: rgba(255, 255, 255, 1) !important;
+    color: #000000 !important;
+}
+
+.btn-light:hover,
+.btn-light:active {
+    background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .btn-secondary {
