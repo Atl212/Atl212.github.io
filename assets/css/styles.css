@@ -135,10 +135,6 @@ body {
     color : #FFFFFF;
 }
 
-/* .text-shadow {
-    text-shadow: 0.03em 0.03em 0.03em #00000050;
-} */
-
 .masthead h1 {
     font-size: 8rem;
 }
@@ -176,13 +172,14 @@ p {
 }
 
 .content-section-heading h2 {
-    font-size: 3rem;
+    font-weight : bold;
+    font-size : 36px;
+    letter-spacing : 0.36px;
+    color : #FFFFFF;
+    color : rgb(255, 255, 255);
 }
 
-.content-section-heading h3 {
-    font-size: 1rem;
-    text-transform: uppercase;
-}
+
 
 @keyframes vertical-sinus {
     to {
@@ -274,8 +271,6 @@ p {
 
 
 
-
-
 .portfolio-item {
     position: relative;
     width: 600px; /* 设置容器宽度 */
@@ -306,7 +301,7 @@ p {
     top: 0;
     bottom: 0;
     z-index: 3; /* 确保文字在遮蔽层之上 */
-    color: #fff;
+    color: #ffffff;
     opacity: 0; /* 初始状态下不可见 */
     transition: opacity 0.3s ease;
 }
@@ -319,6 +314,34 @@ p {
     color: #fff;
     margin: 20px 20px;
 }
+
+.portfolio-item .caption .caption-content .title,
+.portfolio-item .caption .caption-content .body,
+.portfolio-item .caption .caption-content .footer {
+    opacity: 0;
+    transform: translateY(10px); /* 初始位置：向下偏移 px */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* 添加 transform 过渡 */
+}
+
+/* 鼠标悬停时的渐入效果 */
+.portfolio-item:hover .caption .caption-content .title {
+    opacity: 1;
+    transform: translateY(0); /* 移动到原始位置 */
+    transition-delay: 0.1s;
+}
+
+.portfolio-item:hover .caption .caption-content .body {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+.portfolio-item:hover .caption .caption-content .footer {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
 
 .portfolio-item .caption .caption-content .title {
     color: #fff;
@@ -342,14 +365,17 @@ p {
     justify-content: space-between;
 }
 
-
 .portfolio-item .caption .caption-content h2 {
-    font-size: 2rem;
+    font-size : 24px;
+    line-height : 27px;
+    letter-spacing : 0.24px;
 }
 
 .portfolio-item .caption .caption-content p {
+    font-size : 18px;
+    line-height : 27px;
+    letter-spacing : 0.18px;
     font-weight: 300;
-    font-size: 1.2rem;
 }
 
 .portfolio-item .image-container ::before {
@@ -408,7 +434,7 @@ p {
 
 
 .container .text{
-    color: #FFFFFF;
+    color: #CCCCCC;
 }
 
 
@@ -424,7 +450,7 @@ p {
 }
 
 .footer .container .left .text {
-    color: #ffffff;
+    color: rgb(51, 51, 51);
 }
 
 .footer .container .right {
@@ -482,7 +508,7 @@ p {
 }
 
 .btn-light {
-    background-color: rgba(255, 255, 255, 1) !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
     color: #000000 !important;
 }
 
@@ -492,12 +518,14 @@ p {
 }
 
 .btn-secondary {
-    background-color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 1) !important;
+    font-size: 18px;
+    font-weight: bold;
     color: #000000 !important;
 }
 
 .btn-secondary:hover,
 .btn-secondary:active {
-    background-color: rgba(255, 255, 255, 0.5) !important;
+    background-color: rgba(255, 255, 255, 0.6) !important;
     border-color: rgba(0, 0, 0, 0.5) !important;
 }
