@@ -361,9 +361,15 @@ p {
 }
 
 .portfolio-item .caption .caption-content .footer {
-    position: fixed;
-    width: 100%;
+position: absolute; /* 相对于父元素定位 */
     bottom: 20px;
+    width: 90%; /* 宽度设置为 90% */
+    left: 0;
+    right: 0;
+    margin-left: auto; /* 水平居中 */
+    margin-right: auto; /* 水平居中 */
+    box-sizing: border-box; /* 包括 padding 和 border 在内的宽度计算 */
+
 }
 
 .portfolio-item .caption .caption-content .footer-content {

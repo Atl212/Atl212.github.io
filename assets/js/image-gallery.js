@@ -1,9 +1,11 @@
-import Viewer from 'assets/dist/viewerjs-1.11.7/dist/viewer.js';
-
-var image = new Viewer(document.getElementById('image'),{
+var image = new Viewer(document.getElementById('image1'),{
     url: 'data-original'
 });
 
-var images = new Viewer(document.getElementById('images'),{
+var image = new Viewer(document.getElementById('image2'),{
+    url: 'data-original'
+});
+    
+var viewer = new Viewer(document.getElementById('viewer'),{
     url: 'data-original'
 });
