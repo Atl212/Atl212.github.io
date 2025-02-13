@@ -48,10 +48,11 @@ body {
 /* Alt212 左上ロゴ */
 .navbar-left .top-nav {
     font-weight : bold;
-    font-size: 16px;
+    font-size: 14px;
     color: #FFFFFF;
     background: none; /* 背景を消す */
     border: none; /* ボーダーを消す */
+    margin-left: 20px; /* 各ボタンの間隔を調整 */
     cursor: pointer; /* クリックできるマウスカーソル */
 }
 .navbar-left .top-nav:hover {
@@ -66,15 +67,16 @@ body {
 
 /* 右上のナビゲーションボタン */
 .navbar-right .nav {
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     color: #FFFFFF;
     background: none; /* 背景を消す */
     border: none; /* ボーダーを消す */
     cursor: pointer; /* クリックできるマウスカーソル */
-    margin-left: 10px; /* 各ボタンの間隔を調整 */
+    margin-left: 20px; /* 各ボタンの間隔を調整 */
     border-bottom: 2px solid transparent; /* 初期状態でボーダーは透明 */
 }
+
 .navbar-right .nav:hover {
     color: rgba(255, 255, 255, 0.7); /* テキスト色を薄く */
 }
@@ -178,7 +180,6 @@ p {
     color : #FFFFFF;
     color : rgb(255, 255, 255);
 }
-
 
 
 @keyframes vertical-sinus {
@@ -301,13 +302,17 @@ p {
     top: 0;
     bottom: 0;
     z-index: 3; /* 确保文字在遮蔽层之上 */
-    color: #ffffff;
-    opacity: 0; /* 初始状态下不可见 */
+    
     transition: opacity 0.3s ease;
 }
 
 .portfolio-item:hover .caption {
     opacity: 1; /* 鼠标悬停时显示文字 */
+}
+
+.portfolio-item .caption.fade-out {
+    opacity: 0; /* 用于延迟隐藏 */
+    transition: opacity 0.3s ease; /* 添加透明度过渡 */
 }
 
 .portfolio-item .caption .caption-content {
@@ -342,16 +347,17 @@ p {
     transition-delay: 0.3s;
 }
 
-
 .portfolio-item .caption .caption-content .title {
-    color: #fff;
+    color: #FFFFFF;
     font-weight: bold;
     border-bottom: #FFFFFF 1px solid;
+    padding-bottom: 5px;
     margin-bottom: 20px;
 }
 
 .portfolio-item .caption .caption-content .body {
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 .portfolio-item .caption .caption-content .footer {
@@ -384,7 +390,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.2); /* 半透明黑色背景 */
+    background: rgba(255, 255, 255, 1); /* 半透明黑色背景 */
     opacity: 0; /* 初始状态下不可见 */
     transition: opacity 0.3s ease;
     z-index: 2; /* 确保遮蔽层在图片之上 */
