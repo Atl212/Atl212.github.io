@@ -39,10 +39,11 @@ body {
     display: flex;
     justify-content: space-between; /* 左右の要素を配置 */
     align-items: center; /* 垂直方向を中央揃え */
-    background-color: #000; /* 背景黒 */
+    background-color: rgba(0, 0, 0, 0.7); /* 背景黒 */
     padding: 0 100px;
-    border-bottom: 1px solid rgba(128, 128, 128, 1);
+    border-bottom: 1px solid #333;
     height: 60px; /* 固定高さ */
+    backdrop-filter: blur(30px) brightness(0.8); /* 背景模糊和亮度调整 */
 }
 
 /* Alt212 左上ロゴ */
@@ -420,7 +421,7 @@ position: absolute; /* 相对于父元素定位 */
 
 .painting-item {
     max-width: 1200px;
-    margin: auto auto 1rem;
+    margin: auto auto 4rem;
     cursor: pointer;
 }
 
