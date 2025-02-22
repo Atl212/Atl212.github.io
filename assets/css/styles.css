@@ -211,9 +211,6 @@ p {
     transition: opacity 0.2s ease-out;
 }
 
-.scroll-content .icon-content .top-social-link{
-}
-
 .scroll-content .icon-content .top-social-link .icon{
     display: flex;
     width: 48px;
