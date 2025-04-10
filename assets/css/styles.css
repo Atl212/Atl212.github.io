@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Source Han Sans CN';
-    src: url('../fonts/Source-Han-Sans-CN-VF-Regular.otf');
+    src: url('../../assets/fonts/Source-Han-Sans-CN-VF-Regular.otf');
 }
 
 :root {
@@ -98,12 +98,10 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: auto auto;
-    background-position-y: bottom;
 }
 
 .masthead-background {
-    background-image: url("/assets/img/header_background_3_not_nosie.png");
+    background-image: url("../img/header_background_3_not_nosie.png");
     background-repeat: no-repeat;
     /* 画像が要素全体を覆うようにします */
     background-size: cover;
